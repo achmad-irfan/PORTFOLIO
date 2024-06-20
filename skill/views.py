@@ -4,7 +4,7 @@ from .models import skills
 
 
 def index(request):
-    skillss = skillsss.objects.all()
+    skillss = Skillsss.objects.all()
     context = {
         'title': 'Skills',
         'skills': skillss}
