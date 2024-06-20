@@ -8,4 +8,4 @@ class skillsss(models.Model):
     image = models.ImageField()
 
     def _str_(self):
-        return "{}".format(self.name)
+        return "{}".format(self.skill_names)
