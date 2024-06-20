@@ -4,7 +4,7 @@ from django.db import models
 
 
 class skill(models.Model):
-    skill_name = models.CharField(max_length=50)
+    skill_names = models.CharField(max_length=50)
     image = models.ImageField()
 
     def _str_(self):
