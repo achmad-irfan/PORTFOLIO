@@ -88,9 +88,9 @@ WSGI_APPLICATION = "PORTFOLIO.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'achmadi2_PORTFOLIO',
-        'USER': 'achmadi2_irfan',
-        'PASSWORD': 'OY]bD)hg=Sz)',
+        'NAME': 'achmadi2_portfolio',
+        'USER': 'achmadi2_irfan_afandi',
+        'PASSWORD': 'nl0;;Ph{O0b*',
         'HOST': 'localhost',
         'PORT': '3306',
     }
