@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import skills
+from .models import Skillsss
 # Create your views here.
 
 
