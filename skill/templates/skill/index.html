@@ -21,8 +21,8 @@
 <hr />
 <div class="isi">
   <ul class="skills">
-    {% for skills in skill %}
-    <li><img src="{% static 'img/'|add:skills.skill_name|lower|add:'.png' %}" alt="icon" /> {{skills.skill_name}}</li>
+    {% for skill in skills %}
+    <li><img src="{% static 'img/'|add:skill.skill_name|lower|add:'.png' %}" alt="icon" /> {{skill.skill_name}}</li>
     {% endfor %}
   </ul>
 </div>
