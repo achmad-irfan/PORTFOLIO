@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Skillsss
+from .models import ListSkill
 # Create your views here.
 
 
 def index(request):
-    skillss = Skillsss.objects.all()
+    skillss = ListSkill.objects.all()
     context = {
         'title': 'Skills',
         'skills': skillss}
