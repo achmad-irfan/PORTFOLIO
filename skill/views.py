@@ -4,9 +4,9 @@ from .models import skills
 
 
 def index(request):
-    skill = skill.objects.all()
+    skillss = skillsss.objects.all()
     context = {
         'title': 'Skills',
-        'skills': skill}
+        'skills': skillss}
 
     return render(request, 'skill/index.html', context)

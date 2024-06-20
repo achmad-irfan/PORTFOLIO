@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class skill(models.Model):
+class skillsss(models.Model):
     skill_names = models.CharField(max_length=50)
     image = models.ImageField()
 
