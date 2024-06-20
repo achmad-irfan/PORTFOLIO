@@ -1,0 +1,1724 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 15.1
+-- Dumped by pg_dump version 15.1
+
+-- Started on 2023-09-12 23:07:20
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 3635 (class 0 OID 24798)
+-- Dependencies: 238
+-- Data for Name: about_summaries; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.about_summaries (id, isi) FROM stdin;
+1	My name is achmad irfan afandi, I have a strong passion in numbers, mathematics, and formula. My journey as data analyst and data scientist began when my boss often gave me assignments to analyze problems that often occur on machines using Microsoft Excel, until finally I found a new passion when I managed to process data, create formulas, create charts and provide insight and successfully solve problems. And by joining refocus, I can learn and maximizing my passion in data.
+\.
+
+
+--
+-- TOC entry 3618 (class 0 OID 16587)
+-- Dependencies: 221
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.auth_group (id, name) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3620 (class 0 OID 16595)
+-- Dependencies: 223
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3616 (class 0 OID 16581)
+-- Dependencies: 219
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add log entry	1	add_logentry
+2	Can change log entry	1	change_logentry
+3	Can delete log entry	1	delete_logentry
+4	Can view log entry	1	view_logentry
+5	Can add permission	2	add_permission
+6	Can change permission	2	change_permission
+7	Can delete permission	2	delete_permission
+8	Can view permission	2	view_permission
+9	Can add group	3	add_group
+10	Can change group	3	change_group
+11	Can delete group	3	delete_group
+12	Can view group	3	view_group
+13	Can add user	4	add_user
+14	Can change user	4	change_user
+15	Can delete user	4	delete_user
+16	Can view user	4	view_user
+17	Can add content type	5	add_contenttype
+18	Can change content type	5	change_contenttype
+19	Can delete content type	5	delete_contenttype
+20	Can view content type	5	view_contenttype
+21	Can add session	6	add_session
+22	Can change session	6	change_session
+23	Can delete session	6	delete_session
+24	Can view session	6	view_session
+25	Can add about	7	add_about
+26	Can change about	7	change_about
+27	Can delete about	7	delete_about
+28	Can view about	7	view_about
+29	Can add content	9	add_content
+30	Can change content	9	change_content
+31	Can delete content	9	delete_content
+32	Can view content	9	view_content
+33	Can add summary	8	add_summary
+34	Can change summary	8	change_summary
+35	Can delete summary	8	delete_summary
+36	Can view summary	8	view_summary
+37	Can add summaries	10	add_summaries
+38	Can change summaries	10	change_summaries
+39	Can delete summaries	10	delete_summaries
+40	Can view summaries	10	view_summaries
+41	Can add certification	11	add_certification
+42	Can change certification	11	change_certification
+43	Can delete certification	11	delete_certification
+44	Can view certification	11	view_certification
+45	Can add school	12	add_school
+46	Can change school	12	change_school
+47	Can delete school	12	delete_school
+48	Can view school	12	view_school
+49	Can add project exp	13	add_projectexp
+50	Can change project exp	13	change_projectexp
+51	Can delete project exp	13	delete_projectexp
+52	Can view project exp	13	view_projectexp
+53	Can add work exp	14	add_workexp
+54	Can change work exp	14	change_workexp
+55	Can delete work exp	14	delete_workexp
+56	Can view work exp	14	view_workexp
+57	Can add skills	15	add_skills
+58	Can change skills	15	change_skills
+59	Can delete skills	15	delete_skills
+60	Can view skills	15	view_skills
+61	Can add skill	16	add_skill
+62	Can change skill	16	change_skill
+63	Can delete skill	16	delete_skill
+64	Can view skill	16	view_skill
+65	Can add project	17	add_project
+66	Can change project	17	change_project
+67	Can delete project	17	delete_project
+68	Can view project	17	view_project
+69	Can add projects	18	add_projects
+70	Can change projects	18	change_projects
+71	Can delete projects	18	delete_projects
+72	Can view projects	18	view_projects
+73	Can add offer	19	add_offer
+74	Can change offer	19	change_offer
+75	Can delete offer	19	delete_offer
+76	Can view offer	19	view_offer
+77	Can add proyek	20	add_proyek
+78	Can change proyek	20	change_proyek
+79	Can delete proyek	20	delete_proyek
+80	Can view proyek	20	view_proyek
+81	Can add image	21	add_image
+82	Can change image	21	change_image
+83	Can delete image	21	delete_image
+84	Can view image	21	view_image
+85	Can add result rec	22	add_resultrec
+86	Can change result rec	22	change_resultrec
+87	Can delete result rec	22	delete_resultrec
+88	Can view result rec	22	view_resultrec
+89	Can add contact model	23	add_contactmodel
+90	Can change contact model	23	change_contactmodel
+91	Can delete contact model	23	delete_contactmodel
+92	Can view contact model	23	view_contactmodel
+93	Can add report	24	add_report
+94	Can change report	24	change_report
+95	Can delete report	24	delete_report
+96	Can view report	24	view_report
+97	Can add backgroundn dataset	25	add_backgroundndataset
+98	Can change backgroundn dataset	25	change_backgroundndataset
+99	Can delete backgroundn dataset	25	delete_backgroundndataset
+100	Can view backgroundn dataset	25	view_backgroundndataset
+101	Can add background	26	add_background
+102	Can change background	26	change_background
+103	Can delete background	26	delete_background
+104	Can view background	26	view_background
+105	Can add background project	27	add_backgroundproject
+106	Can change background project	27	change_backgroundproject
+107	Can delete background project	27	delete_backgroundproject
+108	Can view background project	27	view_backgroundproject
+109	Can add dataset	28	add_dataset
+110	Can change dataset	28	change_dataset
+111	Can delete dataset	28	delete_dataset
+112	Can view dataset	28	view_dataset
+113	Can add purpose	29	add_purpose
+114	Can change purpose	29	change_purpose
+115	Can delete purpose	29	delete_purpose
+116	Can view purpose	29	view_purpose
+117	Can add result	30	add_result
+118	Can change result	30	change_result
+119	Can delete result	30	delete_result
+120	Can view result	30	view_result
+121	Can add isiresult	31	add_isiresult
+122	Can change isiresult	31	change_isiresult
+123	Can delete isiresult	31	delete_isiresult
+124	Can view isiresult	31	view_isiresult
+125	Can add recommendation	32	add_recommendation
+126	Can change recommendation	32	change_recommendation
+127	Can delete recommendation	32	delete_recommendation
+128	Can view recommendation	32	view_recommendation
+129	Can add insight	33	add_insight
+130	Can change insight	33	change_insight
+131	Can delete insight	33	delete_insight
+132	Can view insight	33	view_insight
+133	Can add data prep	34	add_dataprep
+134	Can change data prep	34	change_dataprep
+135	Can delete data prep	34	delete_dataprep
+136	Can view data prep	34	view_dataprep
+\.
+
+
+--
+-- TOC entry 3622 (class 0 OID 16601)
+-- Dependencies: 225
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+2	pbkdf2_sha256$600000$FC0TovrH63HnIG88MWBVJ4$PClCFuci4QK09lvabbHz1Y6XAIFsOocKXyqQQo+e6uo=	\N	f	irfan				f	t	2023-08-09 15:47:35.01819+07
+1	pbkdf2_sha256$600000$rP1Xfei7ENdonn3VGZVPUW$0kRbVoe+nWv4gEQ4D/ktwxTKoHIS2eqlQACYaUFvSCQ=	2023-09-05 08:32:31.152911+07	t	admin			achmad.irfan1@yahoo.com	t	t	2023-08-09 12:17:44.439756+07
+\.
+
+
+--
+-- TOC entry 3624 (class 0 OID 16609)
+-- Dependencies: 227
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3626 (class 0 OID 16615)
+-- Dependencies: 229
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3647 (class 0 OID 24942)
+-- Dependencies: 250
+-- Data for Name: contact_contactmodel; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.contact_contactmodel (id, name, email, call, locations, subject, message) FROM stdin;
+9	dff	ddsf@yahoo.com	fds	fdss	dfdsf	dsfdsfdsf
+10	dff	ddsf@yahoo.com	fds	fdss	dfdsf	dsfdsfdsf
+11	dff	ddsf@yahoo.com	fds	fdss	dfdsf	dsfdsfdsf
+\.
+
+
+--
+-- TOC entry 3628 (class 0 OID 16673)
+-- Dependencies: 231
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+1	2023-08-09 15:04:39.67278+07	1	About object (1)	1	[{"added": {}}]	7	1
+2	2023-08-09 15:05:01.197711+07	1	About object (1)	3		7	1
+3	2023-08-09 15:07:49.843976+07	2	About object (2)	1	[{"added": {}}]	7	1
+4	2023-08-09 15:47:36.41477+07	2	irfan	1	[{"added": {}}]	4	1
+5	2023-08-10 04:56:23.49519+07	3	About object (3)	1	[{"added": {}}]	7	1
+6	2023-08-10 04:56:41.675164+07	2	About object (2)	3		7	1
+7	2023-08-10 04:56:54.641203+07	3	About object (3)	2	[]	7	1
+8	2023-08-10 15:13:28.260584+07	1	summaries object (1)	1	[{"added": {}}]	10	1
+9	2023-08-10 15:14:23.20542+07	1	summaries object (1)	2	[{"changed": {"fields": ["Isi"]}}]	10	1
+10	2023-08-10 15:56:20.479755+07	2	summaries object (2)	1	[{"added": {}}]	10	1
+11	2023-08-10 16:00:17.333524+07	2	summaries object (2)	3		10	1
+12	2023-08-12 10:37:08.813304+07	1	certification object (1)	1	[{"added": {}}]	11	1
+13	2023-08-12 10:45:37.348641+07	2	Ms. Excel Intermediate	1	[{"added": {}}]	11	1
+14	2023-08-12 10:54:17.635764+07	3	Problem Solving Type Training	1	[{"added": {}}]	11	1
+15	2023-08-12 10:54:26.058556+07	3	Problem Solving Type Training	2	[]	11	1
+16	2023-08-12 10:55:11.083745+07	1	Politeknik Kota Malang	1	[{"added": {}}]	12	1
+17	2023-08-12 10:57:50.85146+07	2	University of Trisakti	1	[{"added": {}}]	12	1
+18	2023-08-12 10:59:10.235505+07	3	Politeknik Kota Malang	1	[{"added": {}}]	12	1
+19	2023-08-12 10:59:22.251848+07	2	University of Trisakti	2	[{"changed": {"fields": ["Year"]}}]	12	1
+20	2023-08-12 11:14:33.168827+07	1	jlkklzLXKz	1	[{"added": {}}]	13	1
+21	2023-08-12 11:16:02.941125+07	1	Refocus Data Analyst Project Food Story	2	[{"changed": {"fields": ["Title", "City", "Background", "Jobdesk"]}}]	13	1
+22	2023-08-12 12:02:57.199173+07	2	Refocus Data Analyst Project NHTSA	1	[{"added": {}}]	13	1
+23	2023-08-12 13:13:24.170295+07	1	Mechanical Asssembly Staff	1	[{"added": {}}]	14	1
+24	2023-08-12 14:01:25.192857+07	1	Mechanical Asssembly Staff	2	[]	14	1
+25	2023-08-12 15:19:46.977679+07	3	Politeknik Kota Malang	3		12	1
+26	2023-08-12 15:39:13.800377+07	2	Staff Maintenance	1	[{"added": {}}]	14	1
+27	2023-08-12 15:56:22.865029+07	1	MIcrosoft Excel	1	[{"added": {}}]	15	1
+28	2023-08-12 15:56:36.036793+07	2	Google Sphreadsheet	1	[{"added": {}}]	15	1
+29	2023-08-12 15:56:46.866852+07	1	Microsoft Excel	2	[{"changed": {"fields": ["Skill name"]}}]	15	1
+30	2023-08-12 15:57:08.904692+07	3	PostgreSQL	1	[{"added": {}}]	15	1
+31	2023-08-12 15:57:18.065037+07	4	MySQL	1	[{"added": {}}]	15	1
+32	2023-08-12 15:57:31.355957+07	5	Microsoft Power BI	1	[{"added": {}}]	15	1
+33	2023-08-12 15:57:45.40258+07	6	Python	1	[{"added": {}}]	15	1
+34	2023-08-12 15:57:54.628437+07	7	Tableau	1	[{"added": {}}]	15	1
+35	2023-08-12 15:58:07.12046+07	8	Django	1	[{"added": {}}]	15	1
+36	2023-08-12 15:58:25.022684+07	9	Team Work	1	[{"added": {}}]	15	1
+37	2023-08-12 15:58:34.636451+07	10	Leadership	1	[{"added": {}}]	15	1
+38	2023-08-14 08:11:31.912031+07	1	Microsoft Excel	1	[{"added": {}}]	16	1
+39	2023-08-14 08:12:04.420922+07	2	Google Spreadsheet	1	[{"added": {}}]	16	1
+40	2023-08-14 08:12:29.584102+07	3	Microsoft Excel	1	[{"added": {}}]	16	1
+41	2023-08-14 08:12:46.260064+07	1	PostgreSQL	2	[{"changed": {"fields": ["Skill name"]}}]	16	1
+42	2023-08-14 08:13:01.76363+07	4	MySQL	1	[{"added": {}}]	16	1
+43	2023-08-14 08:13:31.831919+07	5	Microsoft Power BI	1	[{"added": {}}]	16	1
+44	2023-08-14 08:13:47.88437+07	6	Tableau	1	[{"added": {}}]	16	1
+45	2023-08-14 08:14:11.947151+07	7	Python	1	[{"added": {}}]	16	1
+46	2023-08-14 08:14:25.684856+07	8	Python Django	1	[{"added": {}}]	16	1
+47	2023-08-14 08:16:24.42099+07	9	Pyhton Dash	1	[{"added": {}}]	16	1
+48	2023-08-14 08:16:46.472129+07	10	Team Work	1	[{"added": {}}]	16	1
+49	2023-08-14 08:17:27.980533+07	11	Project Management	1	[{"added": {}}]	16	1
+50	2023-08-14 08:19:10.790991+07	1	summaries object (1)	1	[{"added": {}}]	10	1
+51	2023-08-14 09:15:22.709212+07	1	Data Cleansing	1	[{"added": {}}]	19	1
+52	2023-08-14 09:16:22.723122+07	2	Data Manipulation	1	[{"added": {}}]	19	1
+53	2023-08-14 09:16:51.390198+07	3	Data Visualization	1	[{"added": {}}]	19	1
+54	2023-08-14 09:17:27.205952+07	4	Dashboard by Power BI/Tableau	1	[{"added": {}}]	19	1
+55	2023-08-14 09:17:44.319073+07	5	Bussiness insight and recomend	1	[{"added": {}}]	19	1
+56	2023-08-14 09:18:39.963928+07	6	Web Building	1	[{"added": {}}]	19	1
+57	2023-08-15 11:28:31.576936+07	1	Food Story	1	[{"added": {}}]	20	1
+58	2023-08-15 11:29:37.339076+07	2	supermarket	1	[{"added": {}}]	20	1
+59	2023-08-15 11:30:37.939911+07	2	supermarket	3		20	1
+60	2023-08-15 11:30:37.947917+07	1	Food Story	3		20	1
+61	2023-08-15 11:30:53.733362+07	3	Food Story	1	[{"added": {}}]	20	1
+62	2023-08-15 12:06:22.205816+07	1	Food Stroy - Power BI	1	[{"added": {}}]	20	1
+63	2023-08-15 12:10:26.86863+07	2	Get Taxxi - SQL	1	[{"added": {}}]	20	1
+64	2023-08-15 13:16:46.925954+07	2	Get Taxxi - SQL	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+65	2023-08-15 13:17:15.035888+07	2	Get Taxxi - SQL	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+66	2023-08-15 13:17:43.690445+07	1	Food Stroy - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+67	2023-08-15 15:45:15.626341+07	2	Get Taxxi - SQL	3		20	1
+68	2023-08-15 15:45:15.880764+07	1	Food Stroy - Power BI	3		20	1
+69	2023-08-15 15:46:14.747225+07	3	fffff - Tableau	1	[{"added": {}}]	20	1
+70	2023-08-15 15:48:57.393261+07	3	Food story - Power BI	2	[{"changed": {"fields": ["Nama", "Category", "Gambar", "Tanggal", "Client", "Output", "Detail"]}}]	20	1
+71	2023-08-15 15:50:42.831969+07	4	Supermarket Dashboard - Power BI	1	[{"added": {}}]	20	1
+72	2023-08-15 15:52:36.501586+07	5	Air BnB Dashboard - Power BI	1	[{"added": {}}]	20	1
+73	2023-08-15 15:53:51.915839+07	6	NHTSA - SQL	1	[{"added": {}}]	20	1
+74	2023-08-15 15:54:41.939018+07	7	Get TAxxi SQL - SQL	1	[{"added": {}}]	20	1
+75	2023-08-15 15:56:07.932349+07	8	WTA - Tableau	1	[{"added": {}}]	20	1
+76	2023-08-15 15:57:25.267511+07	9	Pizza Places - Python Dash	1	[{"added": {}}]	20	1
+77	2023-08-15 15:58:17.155633+07	10	Global Terrorism - Python Dash	1	[{"added": {}}]	20	1
+78	2023-08-15 15:58:53.877986+07	7	Get TAxxi SQL - SQL	2	[{"changed": {"fields": ["Tanggal"]}}]	20	1
+79	2023-08-15 22:47:11.99692+07	1	Image object (1)	1	[{"added": {}}]	21	1
+80	2023-08-15 22:51:41.636928+07	2	Image object (2)	1	[{"added": {}}]	21	1
+81	2023-08-15 22:51:50.033575+07	6	NHTSA - SQL	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+82	2023-08-15 22:55:36.885877+07	3	static/img/supermarket1.png	1	[{"added": {}}]	21	1
+83	2023-08-15 22:55:54.515267+07	4	static/img/supermarket2.png	1	[{"added": {}}]	21	1
+84	2023-08-15 22:56:03.184732+07	5	static/img/supermarket3.png	1	[{"added": {}}]	21	1
+85	2023-08-15 23:01:02.572407+07	6	static/img/tennis_1.png	1	[{"added": {}}]	21	1
+86	2023-08-15 23:01:36.294093+07	6	static/img/tennis_1.png	3		21	1
+87	2023-08-15 23:01:36.304077+07	5	static/img/supermarket3.png	3		21	1
+88	2023-08-15 23:01:36.309077+07	4	static/img/supermarket2.png	3		21	1
+89	2023-08-15 23:01:36.309077+07	3	static/img/supermarket1.png	3		21	1
+90	2023-08-15 23:01:36.314078+07	2	static/img/NHTSA.png	3		21	1
+91	2023-08-15 23:01:36.319195+07	1	static/img/nhtsa2_tHvLmQ8.png	3		21	1
+92	2023-08-15 23:02:39.10853+07	7	static/img/airbnb1.png	1	[{"added": {}}]	21	1
+93	2023-08-15 23:02:46.828919+07	5	Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+94	2023-08-15 23:43:05.913048+07	8	static/img/airbnb2.png	1	[{"added": {}}]	21	1
+95	2023-08-15 23:43:46.326426+07	8	static/img/airbnb2.png	3		21	1
+96	2023-08-15 23:43:46.34656+07	7	static/img/airbnb1.png	3		21	1
+97	2023-08-15 23:44:19.222676+07	9	static/img/Terror_SLMznFV.png	1	[{"added": {}}]	21	1
+98	2023-08-15 23:44:25.417459+07	10	Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+99	2023-08-15 23:45:22.643617+07	10	static/img/NHTSA_Uk1ZhVW.png	1	[{"added": {}}]	21	1
+100	2023-08-15 23:45:27.285797+07	4	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+101	2023-08-15 23:54:56.225055+07	11	media/portfolio-2.jpg	1	[{"added": {}}]	21	1
+102	2023-08-15 23:55:15.07693+07	12	media/foodstory.png	1	[{"added": {}}]	21	1
+103	2023-08-15 23:55:21.654328+07	3	Food story - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+104	2023-08-15 23:55:44.950048+07	13	media/supermarket.png	1	[{"added": {}}]	21	1
+105	2023-08-15 23:55:49.843312+07	10	Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+106	2023-08-16 00:06:07.681743+07	3	Food story - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+107	2023-08-16 00:06:24.852767+07	4	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+108	2023-08-16 00:06:39.253657+07	5	Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+109	2023-08-16 00:08:29.487843+07	6	NHTSA - SQL	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+110	2023-08-16 00:08:43.095775+07	6	NHTSA - SQL	2	[]	20	1
+111	2023-08-16 00:08:56.39557+07	7	Get TAxxi SQL - SQL	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+112	2023-08-16 00:09:12.508637+07	8	WTA - Tableau	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+113	2023-08-16 00:09:26.630986+07	9	Pizza Places - Python Dash	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+114	2023-08-16 00:09:40.820659+07	10	Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+115	2023-08-16 00:13:51.250727+07	3	Food story - Power BI	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+116	2023-08-16 00:19:14.758728+07	5	Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Gambar", "Gambar2", "Gambar3"]}}]	20	1
+117	2023-08-16 07:26:52.903778+07	11	Portofolio - Python Django	1	[{"added": {}}]	20	1
+118	2023-08-16 07:42:28.151266+07	4	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Gambar2", "Gambar3"]}}]	20	1
+119	2023-08-16 07:44:41.104317+07	4	Supermarket Dashboard - Power BI	2	[]	20	1
+120	2023-08-16 07:45:45.371517+07	8	WTA - Tableau	2	[{"changed": {"fields": ["Gambar2", "Gambar3", "Gambar4"]}}]	20	1
+121	2023-08-16 12:45:00.341178+07	3	Food story - Power BI	2	[{"changed": {"fields": ["Gambar2", "Gambar3", "Gambar4"]}}]	20	1
+122	2023-08-16 13:06:31.139357+07	3	Food story - Power BI	2	[{"changed": {"fields": ["Background", "Purpose", "Dataset", "InsAndRecm"]}}]	20	1
+123	2023-08-16 20:20:32.776475+07	4	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Background", "Purpose", "Dataset", "InsAndRecm"]}}]	20	1
+124	2023-08-16 20:21:51.253374+07	5	Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Background", "Purpose", "Dataset", "InsAndRecm"]}}]	20	1
+125	2023-08-16 20:23:13.730499+07	6	NHTSA - SQL	2	[{"changed": {"fields": ["Background", "Purpose", "Dataset", "InsAndRecm"]}}]	20	1
+126	2023-08-16 20:24:23.791969+07	7	Get TAxxi SQL - SQL	2	[{"changed": {"fields": ["Background", "Purpose", "Dataset"]}}]	20	1
+127	2023-08-16 20:25:29.979104+07	7	Get TAxxi SQL - SQL	2	[{"changed": {"fields": ["Gambar2"]}}]	20	1
+128	2023-08-16 20:26:30.929742+07	7	Get TAxxi SQL - SQL	2	[{"changed": {"fields": ["InsAndRecm"]}}]	20	1
+129	2023-08-17 08:56:08.473819+07	9	Pizza Places - Python Dash	2	[{"changed": {"fields": ["Tanggal"]}}]	20	1
+130	2023-08-17 23:46:21.153806+07	7	Get TAxxi SQL - SQL	2	[]	20	1
+131	2023-08-17 23:49:31.648088+07	12	cxzxzcc - Power BI	1	[{"added": {}}]	20	1
+132	2023-08-18 08:06:15.972558+07	9	Pizza Places - Python Dash	2	[{"changed": {"fields": ["Gambar"]}}]	20	1
+133	2023-08-18 08:25:31.694917+07	3	Food story - Power BI	2	[{"changed": {"fields": ["Slug"]}}]	20	1
+134	2023-08-18 08:25:51.716179+07	4	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Slug"]}}]	20	1
+135	2023-08-18 08:26:10.892886+07	5	Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Slug"]}}]	20	1
+136	2023-08-18 08:26:22.157144+07	6	NHTSA - SQL	2	[{"changed": {"fields": ["Slug"]}}]	20	1
+137	2023-08-18 08:26:34.639613+07	7	Get TAxxi - SQL	2	[{"changed": {"fields": ["Nama"]}}]	20	1
+138	2023-08-18 08:26:47.509012+07	8	WTA - Tableau	2	[{"changed": {"fields": ["Slug"]}}]	20	1
+139	2023-08-18 08:26:58.00529+07	9	Pizza Places - Python Dash	2	[]	20	1
+140	2023-08-18 08:27:14.771059+07	10	Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Slug"]}}]	20	1
+141	2023-08-18 08:27:24.86884+07	11	Portofolio - Python Django	2	[{"changed": {"fields": ["Slug"]}}]	20	1
+142	2023-08-18 08:27:36.133338+07	12	cxzxzcc - Power BI	3		20	1
+143	2023-08-18 08:28:32.390274+07	6	NHTSA - SQL	2	[{"changed": {"fields": ["Gambar2"]}}]	20	1
+144	2023-08-18 09:29:25.632305+07	13	muju - Power BI	1	[{"added": {}}]	20	1
+145	2023-08-18 10:01:55.382653+07	9	Pizza Places - Python Dash	2	[]	20	1
+146	2023-08-18 10:02:06.481342+07	9	Pizza Places - Python Dash	2	[]	20	1
+147	2023-08-18 10:02:19.018048+07	11	Portofolio - Python Django	2	[]	20	1
+148	2023-08-18 10:08:40.27938+07	11	Portofolio - Python Django	2	[]	20	1
+149	2023-08-18 10:12:50.873329+07	11	Portofolio - Python Django	2	[]	20	1
+150	2023-08-18 10:12:58.547078+07	3	Food story - Power BI	2	[]	20	1
+151	2023-08-18 10:13:12.405229+07	4	Supermarket Dashboard - Power BI	2	[]	20	1
+152	2023-08-18 10:13:19.99225+07	5	Air BnB Dashboard - Power BI	2	[]	20	1
+153	2023-08-18 10:13:34.734739+07	6	NHTSA - SQL	2	[]	20	1
+154	2023-08-18 10:13:44.427455+07	8	WTA - Tableau	2	[]	20	1
+155	2023-08-18 10:13:52.066945+07	9	Pizza Places - Python Dash	2	[]	20	1
+156	2023-08-18 10:13:58.626282+07	10	Global Terrorism - Python Dash	2	[]	20	1
+157	2023-08-18 10:14:04.834429+07	11	Portofolio - Python Django	2	[]	20	1
+158	2023-08-18 10:14:14.464191+07	13	muju - Power BI	3		20	1
+159	2023-08-18 10:26:19.44006+07	8	WTA - Tableau	2	[]	20	1
+160	2023-08-18 10:26:31.542441+07	8	WTA Tennis - Tableau	2	[{"changed": {"fields": ["Nama"]}}]	20	1
+161	2023-08-18 10:26:38.80323+07	8	WTA Tennis - Tableau	2	[]	20	1
+162	2023-08-18 10:26:45.212761+07	3	Food story - Power BI	2	[]	20	1
+163	2023-08-18 10:51:09.009946+07	3	Food story - Power BI	2	[]	20	1
+164	2023-08-18 10:51:15.290688+07	4	Supermarket Dashboard - Power BI	2	[]	20	1
+165	2023-08-18 10:51:21.208453+07	5	Air BnB Dashboard - Power BI	2	[]	20	1
+166	2023-08-18 10:51:27.687458+07	6	NHTSA - SQL	2	[]	20	1
+167	2023-08-18 10:51:34.119766+07	7	Get TAxxi - SQL	2	[]	20	1
+168	2023-08-18 10:51:40.938721+07	7	Get TAxxi - SQL	2	[]	20	1
+169	2023-08-18 10:51:47.375305+07	8	WTA Tennis - Tableau	2	[]	20	1
+170	2023-08-18 10:51:53.639018+07	9	Pizza Places - Python Dash	2	[]	20	1
+171	2023-08-18 10:51:59.665679+07	10	Global Terrorism - Python Dash	2	[]	20	1
+172	2023-08-18 10:52:05.541414+07	11	Portofolio - Python Django	2	[]	20	1
+173	2023-08-19 11:22:00.630244+07	1	sdsa	1	[{"added": {}}]	23	1
+174	2023-08-19 15:25:54.560106+07	2	DSAD	3		23	1
+175	2023-08-19 15:25:54.570104+07	1	sdsa	3		23	1
+176	2023-08-19 15:26:05.726902+07	8	DSAD	3		23	1
+177	2023-08-19 15:26:05.736905+07	7	DSAD	3		23	1
+178	2023-08-19 15:26:05.736905+07	6	DSAD	3		23	1
+179	2023-08-19 15:26:05.741902+07	5	DSAD	3		23	1
+180	2023-08-19 15:26:05.741902+07	4	DSAD	3		23	1
+181	2023-08-19 15:26:05.746906+07	3	DSAD	3		23	1
+182	2023-08-21 17:18:41.736035+07	12	Leadership	1	[{"added": {}}]	16	1
+183	2023-08-21 17:56:10.752232+07	9	Python Dash	2	[{"changed": {"fields": ["Skill name"]}}]	16	1
+184	2023-08-22 12:07:57.134762+07	3	Problem Solving Type Training	2	[{"changed": {"fields": ["Finish"]}}]	11	1
+185	2023-08-22 12:08:10.995611+07	2	Ms. Excel Intermediate	2	[{"changed": {"fields": ["Finish"]}}]	11	1
+186	2023-08-22 12:08:23.598471+07	1	Data Analyst	2	[{"changed": {"fields": ["Finish"]}}]	11	1
+187	2023-08-22 12:08:48.132758+07	2	Refocus Data Analyst Project NHTSA	2	[{"changed": {"fields": ["Finish"]}}]	13	1
+188	2023-08-22 12:09:00.64583+07	1	Refocus Data Analyst Project Food Story	2	[{"changed": {"fields": ["Finish"]}}]	13	1
+189	2023-08-22 12:09:16.369248+07	1	Politeknik Kota Malang	2	[{"changed": {"fields": ["Finish"]}}]	12	1
+190	2023-08-22 12:09:24.112337+07	2	University of Trisakti	2	[{"changed": {"fields": ["Finish"]}}]	12	1
+191	2023-08-22 12:09:42.598293+07	1	Mechanical Asssembly Staff	2	[{"changed": {"fields": ["Finish"]}}]	14	1
+192	2023-08-22 12:09:54.031021+07	2	Staff Maintenance	2	[{"changed": {"fields": ["Finish"]}}]	14	1
+193	2023-08-28 20:56:25.254339+07	1	Data Cleansing	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+194	2023-08-28 20:57:31.004105+07	3	Data Visualization	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+195	2023-08-28 20:58:37.319453+07	2	Data Manipulation	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+196	2023-08-28 20:59:23.813605+07	4	Dashboard by Power BI/Tableau	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+197	2023-08-28 21:00:09.197033+07	6	Web Building	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+198	2023-08-28 21:01:39.004876+07	5	Bussiness insight and recomend	2	[]	19	1
+199	2023-08-28 21:01:50.920841+07	1	Data Cleansing	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+200	2023-08-28 21:03:09.650314+07	5	Bussiness insight and recomend	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+201	2023-08-28 21:15:30.780311+07	5	Bussiness insight and recomend	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+202	2023-08-28 21:16:47.237421+07	1	Data Cleansing	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+203	2023-08-28 21:17:35.492721+07	6	Web Building	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+204	2023-08-28 21:18:07.4096+07	4	Dashboard by Power BI/Tableau	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+205	2023-08-28 21:19:15.851803+07	3	Data Visualization	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+206	2023-08-28 21:20:31.848114+07	2	Data Manipulation	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+207	2023-08-28 21:41:39.755426+07	4	Dashboard by Power BI/Tableau	2	[{"changed": {"fields": ["Icon"]}}]	19	1
+208	2023-08-28 21:42:58.20677+07	4	Dashboard by Power BI/Tableau	3		19	1
+209	2023-08-28 21:44:04.65103+07	7	Dashboard by Power BI/Tableau	1	[{"added": {}}]	19	1
+210	2023-08-29 10:54:20.937375+07	6	NHTSA - SQL	2	[{"changed": {"fields": ["Tanggal"]}}]	20	1
+211	2023-08-29 20:49:25.02717+07	10	Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Gambar2"]}}]	20	1
+212	2023-08-29 20:53:39.431218+07	5	Air BnB Dashboard - Power BI	2	[]	20	1
+213	2023-08-29 20:54:45.142861+07	9	Pizza Places - Power BI	2	[{"changed": {"fields": ["Category"]}}]	20	1
+214	2023-08-29 20:55:24.657694+07	9	Pizza Places - Python Dash	2	[{"changed": {"fields": ["Category"]}}]	20	1
+215	2023-08-30 13:49:21.204027+07	2	Refocus Data Analyst Project NHTSA	2	[{"changed": {"fields": ["Finish"]}}]	13	1
+216	2023-08-30 13:49:34.662273+07	1	Refocus Data Analyst Project Food Story	2	[{"changed": {"fields": ["Finish"]}}]	13	1
+217	2023-08-30 14:20:13.694906+07	2	Staff Maintenance	2	[{"changed": {"fields": ["Finish"]}}]	14	1
+218	2023-08-30 14:22:29.772343+07	1	Refocus Data Analyst Project Food Story	2	[{"changed": {"fields": ["Jobdesk2", "Jobdesk3", "Jobdesk1"]}}]	13	1
+219	2023-08-30 14:23:09.8949+07	2	Refocus Data Analyst Project NHTSA	2	[{"changed": {"fields": ["Jobdesk2", "Jobdesk3", "Jobdesk1"]}}]	13	1
+220	2023-08-30 14:25:13.700531+07	1	Mechanical Asssembly Staff	2	[{"changed": {"fields": ["Jobdesk2", "Jobdesk3", "Jobdesk1"]}}]	14	1
+221	2023-08-30 14:26:01.61612+07	2	Staff Maintenance	2	[{"changed": {"fields": ["Jobdesk1"]}}]	14	1
+222	2023-08-30 14:27:40.908879+07	1	Mechanical Asssembly Staff	2	[{"changed": {"fields": ["Jobdesk1", "Jobdesk4"]}}]	14	1
+223	2023-08-30 14:56:27.940632+07	2	Refocus Data Analyst Project NHTSA	2	[{"changed": {"fields": ["Jobdesk1", "Jobdesk3", "Jobdesk4"]}}]	13	1
+224	2023-08-30 14:58:12.825605+07	1	Refocus Data Analyst Project Food Story	2	[{"changed": {"fields": ["Jobdesk1", "Jobdesk3", "Jobdesk4"]}}]	13	1
+225	2023-08-30 14:58:37.522535+07	1	Refocus Data Analyst Project Food Story	2	[]	13	1
+226	2023-08-30 15:27:30.116906+07	2	Staff Maintenance	2	[{"changed": {"fields": ["Company"]}}]	14	1
+227	2023-08-30 15:27:46.423664+07	1	Mechanical Asssembly Staff	2	[{"changed": {"fields": ["Company"]}}]	14	1
+228	2023-09-01 15:14:05.132032+07	1	NHTSA - SQL	1	[{"added": {}}]	26	1
+229	2023-09-01 15:16:13.460734+07	2	Global Terrorism - Python Dash	1	[{"added": {}}]	26	1
+230	2023-09-01 15:32:06.657233+07	3	Get TAxxi - SQL	1	[{"added": {}}]	26	1
+231	2023-09-01 15:32:46.663707+07	4	Pizza Places - Python Dash	1	[{"added": {}}]	26	1
+232	2023-09-01 15:35:03.977137+07	2	Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Background"]}}]	26	1
+233	2023-09-01 15:35:19.561833+07	1	NHTSA - SQL	2	[]	26	1
+234	2023-09-01 15:44:29.776299+07	5	Portofolio - Python Django	1	[{"added": {}}]	26	1
+235	2023-09-01 15:45:15.073116+07	6	Air BnB Dashboard - Power BI	1	[{"added": {}}]	26	1
+236	2023-09-01 15:45:45.656409+07	7	Supermarket Dashboard - Power BI	1	[{"added": {}}]	26	1
+237	2023-09-01 15:46:21.266723+07	8	Food story - Power BI	1	[{"added": {}}]	26	1
+238	2023-09-01 15:46:54.862659+07	9	WTA Tennis - Tableau	1	[{"added": {}}]	26	1
+239	2023-09-01 15:48:56.303798+07	11	Portofolio - Python Django	2	[]	20	1
+240	2023-09-01 20:50:48.932433+07	2	Supermarket Dashboard - Power BI	1	[{"added": {}}]	27	1
+241	2023-09-01 21:34:09.88119+07	2	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Background"]}}]	27	1
+242	2023-09-01 21:43:53.26064+07	2	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Background"]}}]	27	1
+243	2023-09-01 22:27:05.612493+07	1	Supermarket Dashboard - Power BI	1	[{"added": {}}]	29	1
+244	2023-09-01 22:28:36.46066+07	1	Supermarket Dashboard - Power BI	1	[{"added": {}}]	28	1
+245	2023-09-02 06:46:44.743335+07	2	Supermarket Dashboard - Power BI	2	[]	26	1
+246	2023-09-02 08:44:51.254658+07	2	Supermarket Dashboard - Power BI	2	[]	26	1
+247	2023-09-02 08:45:06.718076+07	1	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Purpose"]}}]	29	1
+248	2023-09-02 09:02:11.527125+07	1	Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Dataset", "Link"]}}]	28	1
+249	2023-09-02 09:06:52.307166+07	3	Food story - Power BI	1	[{"added": {}}]	26	1
+250	2023-09-02 09:07:22.371373+07	2	Food story - Power BI	1	[{"added": {}}]	29	1
+251	2023-09-02 09:08:21.652471+07	2	Food story - Power BI	1	[{"added": {}}]	28	1
+252	2023-09-02 10:08:52.799934+07	1	Air BnB Dashboard - Power BI	1	[{"added": {}}]	30	1
+253	2023-09-02 10:14:14.026298+07	1	Air BnB Dashboard - Power BI	3		30	1
+254	2023-09-02 10:20:19.148014+07	2	result object (2)	1	[{"added": {}}]	30	1
+255	2023-09-02 10:22:31.872782+07	4	projects.Proyek.None	1	[{"added": {}}]	30	1
+256	2023-09-02 10:23:15.554563+07	5	projects.Proyek.None	1	[{"added": {}}]	30	1
+257	2023-09-02 10:24:18.124629+07	6	projects.Proyek.None	1	[{"added": {}}]	30	1
+258	2023-09-02 10:25:28.031538+07	7	projects.Proyek.None	1	[{"added": {}}]	30	1
+259	2023-09-02 11:49:55.478424+07	1	projects.Proyek.None	1	[{"added": {}}]	33	1
+260	2023-09-02 11:50:25.572348+07	2	projects.Proyek.None	1	[{"added": {}}]	33	1
+261	2023-09-02 11:51:02.133819+07	3	projects.Proyek.None	1	[{"added": {}}]	33	1
+262	2023-09-02 11:51:31.66713+07	4	projects.Proyek.None	1	[{"added": {}}]	33	1
+263	2023-09-02 11:51:59.260108+07	5	projects.Proyek.None	1	[{"added": {}}]	33	1
+264	2023-09-02 11:52:13.104413+07	6	projects.Proyek.None	1	[{"added": {}}]	33	1
+265	2023-09-02 12:15:34.227805+07	1	projects.Proyek.None	2	[]	33	1
+266	2023-09-02 12:59:30.946533+07	8	result-Food story - Power BI	1	[{"added": {}}]	30	1
+267	2023-09-02 13:00:00.293464+07	9	result-Food story - Power BI	1	[{"added": {}}]	30	1
+268	2023-09-02 13:00:42.524842+07	10	result-Food story - Power BI	1	[{"added": {}}]	30	1
+269	2023-09-02 13:01:38.206207+07	11	result-Food story - Power BI	1	[{"added": {}}]	30	1
+270	2023-09-02 13:02:15.105918+07	12	result-Food story - Power BI	1	[{"added": {}}]	30	1
+271	2023-09-02 13:02:59.187155+07	13	result-Food story - Power BI	1	[{"added": {}}]	30	1
+272	2023-09-02 14:15:04.002702+07	4	Global Terrorism - Python Dash	1	[{"added": {}}]	26	1
+273	2023-09-02 14:23:29.793767+07	3	Global Terrorism - Python Dash	1	[{"added": {}}]	29	1
+274	2023-09-02 14:23:46.230451+07	3	Global Terrorism - Python Dash	2	[]	29	1
+275	2023-09-02 14:33:29.061501+07	1	result-Food story - Power BI	1	[{"added": {}}]	29	1
+276	2023-09-02 14:33:38.326938+07	1	result-Food story - Power BI	2	[]	29	1
+277	2023-09-02 14:34:41.900223+07	2	purpose-Global Terrorism - Python Dash	1	[{"added": {}}]	29	1
+278	2023-09-02 14:35:02.458693+07	3	purpose-Global Terrorism - Python Dash	1	[{"added": {}}]	29	1
+279	2023-09-02 14:35:15.745119+07	4	purpose-Global Terrorism - Python Dash	1	[{"added": {}}]	29	1
+280	2023-09-02 14:35:26.973497+07	5	purpose-Global Terrorism - Python Dash	1	[{"added": {}}]	29	1
+281	2023-09-02 14:35:50.334918+07	1	purpose-Global Terrorism - Python Dash	2	[{"changed": {"fields": ["NamaProject"]}}]	29	1
+282	2023-09-02 14:36:29.117702+07	6	purpose-Food story - Power BI	1	[{"added": {}}]	29	1
+283	2023-09-02 14:36:42.259726+07	6	purpose-Food story - Power BI	2	[{"changed": {"fields": ["Isi", "Heading"]}}]	29	1
+284	2023-09-02 14:44:45.331523+07	6	purpose-Food story - Power BI	2	[{"changed": {"fields": ["Heading"]}}]	29	1
+285	2023-09-02 14:45:26.684609+07	7	purpose-Supermarket Dashboard - Power BI	1	[{"added": {}}]	29	1
+286	2023-09-02 15:18:26.366514+07	1	dataset-Food story - Power BI	1	[{"added": {}}]	28	1
+287	2023-09-02 15:19:17.490974+07	2	dataset-Food story - Power BI	1	[{"added": {}}]	28	1
+288	2023-09-02 15:20:03.061724+07	3	dataset-Food story - Power BI	1	[{"added": {}}]	28	1
+289	2023-09-02 15:20:40.87617+07	4	dataset-Food story - Power BI	1	[{"added": {}}]	28	1
+290	2023-09-02 15:21:07.141319+07	5	dataset-Food story - Power BI	1	[{"added": {}}]	28	1
+291	2023-09-02 16:28:38.792693+07	5	Air BnB Dashboard - Power BI	1	[{"added": {}}]	26	1
+292	2023-09-02 16:29:14.666858+07	6	NHTSA - SQL	1	[{"added": {}}]	26	1
+293	2023-09-02 16:29:47.065554+07	7	Get TAxxi - SQL	1	[{"added": {}}]	26	1
+294	2023-09-02 16:30:19.756351+07	8	Pizza Places - Python Dash	1	[{"added": {}}]	26	1
+295	2023-09-02 16:31:19.407233+07	9	WTA Tennis - Tableau	1	[{"added": {}}]	26	1
+296	2023-09-02 16:32:06.242084+07	6	dataset-WTA Tennis - Tableau	1	[{"added": {}}]	28	1
+297	2023-09-02 16:32:44.569239+07	7	dataset-WTA Tennis - Tableau	1	[{"added": {}}]	28	1
+298	2023-09-02 16:33:38.179609+07	8	dataset-Global Terrorism - Python Dash	1	[{"added": {}}]	28	1
+299	2023-09-02 16:34:01.397942+07	9	dataset-Global Terrorism - Python Dash	1	[{"added": {}}]	28	1
+300	2023-09-02 16:34:35.509863+07	10	dataset-Global Terrorism - Python Dash	1	[{"added": {}}]	28	1
+301	2023-09-02 16:34:56.04684+07	11	dataset-Pizza Places - Python Dash	1	[{"added": {}}]	28	1
+302	2023-09-02 16:35:24.747003+07	12	dataset-Pizza Places - Python Dash	1	[{"added": {}}]	28	1
+303	2023-09-02 16:35:47.523357+07	13	dataset-Pizza Places - Python Dash	1	[{"added": {}}]	28	1
+304	2023-09-02 16:36:09.757775+07	14	dataset-Pizza Places - Python Dash	1	[{"added": {}}]	28	1
+305	2023-09-02 16:37:03.234778+07	15	dataset-Get TAxxi - SQL	1	[{"added": {}}]	28	1
+306	2023-09-02 16:37:28.909459+07	16	dataset-Get TAxxi - SQL	1	[{"added": {}}]	28	1
+307	2023-09-02 16:38:25.187228+07	17	dataset-NHTSA - SQL	1	[{"added": {}}]	28	1
+308	2023-09-02 16:38:42.539382+07	18	dataset-NHTSA - SQL	1	[{"added": {}}]	28	1
+309	2023-09-02 16:39:03.295668+07	19	dataset-Air BnB Dashboard - Power BI	1	[{"added": {}}]	28	1
+310	2023-09-02 16:39:24.0216+07	20	dataset-Air BnB Dashboard - Power BI	1	[{"added": {}}]	28	1
+311	2023-09-02 16:39:50.01872+07	21	dataset-Air BnB Dashboard - Power BI	1	[{"added": {}}]	28	1
+312	2023-09-02 16:40:07.327615+07	22	dataset-Air BnB Dashboard - Power BI	1	[{"added": {}}]	28	1
+313	2023-09-02 16:40:30.03905+07	23	dataset-Air BnB Dashboard - Power BI	1	[{"added": {}}]	28	1
+314	2023-09-02 16:41:20.948074+07	7	projects.Proyek.None	1	[{"added": {}}]	33	1
+315	2023-09-02 16:41:34.337403+07	8	projects.Proyek.None	1	[{"added": {}}]	33	1
+316	2023-09-02 16:42:04.319249+07	9	projects.Proyek.None	1	[{"added": {}}]	33	1
+317	2023-09-02 16:42:15.877585+07	10	projects.Proyek.None	1	[{"added": {}}]	33	1
+318	2023-09-02 16:42:30.689771+07	11	projects.Proyek.None	1	[{"added": {}}]	33	1
+319	2023-09-02 16:42:43.238964+07	12	projects.Proyek.None	1	[{"added": {}}]	33	1
+320	2023-09-02 16:43:09.761323+07	13	projects.Proyek.None	1	[{"added": {}}]	33	1
+321	2023-09-02 16:43:20.982419+07	14	projects.Proyek.None	1	[{"added": {}}]	33	1
+322	2023-09-02 16:43:34.000308+07	15	projects.Proyek.None	1	[{"added": {}}]	33	1
+323	2023-09-02 16:43:48.66164+07	16	projects.Proyek.None	1	[{"added": {}}]	33	1
+324	2023-09-02 16:44:04.857659+07	17	projects.Proyek.None	1	[{"added": {}}]	33	1
+325	2023-09-02 16:44:18.901828+07	18	projects.Proyek.None	1	[{"added": {}}]	33	1
+326	2023-09-02 16:44:42.109925+07	19	projects.Proyek.None	1	[{"added": {}}]	33	1
+327	2023-09-02 16:44:54.221127+07	20	projects.Proyek.None	1	[{"added": {}}]	33	1
+328	2023-09-02 16:45:08.437555+07	21	projects.Proyek.None	1	[{"added": {}}]	33	1
+329	2023-09-02 16:45:26.410393+07	22	projects.Proyek.None	1	[{"added": {}}]	33	1
+330	2023-09-02 16:45:42.086414+07	23	projects.Proyek.None	1	[{"added": {}}]	33	1
+331	2023-09-02 16:45:54.143219+07	24	projects.Proyek.None	1	[{"added": {}}]	33	1
+332	2023-09-02 16:46:22.000876+07	25	projects.Proyek.None	1	[{"added": {}}]	33	1
+333	2023-09-02 16:46:40.037105+07	26	projects.Proyek.None	1	[{"added": {}}]	33	1
+334	2023-09-02 16:46:53.901384+07	27	projects.Proyek.None	1	[{"added": {}}]	33	1
+335	2023-09-02 16:47:06.598527+07	28	projects.Proyek.None	1	[{"added": {}}]	33	1
+336	2023-09-02 16:47:18.21136+07	29	projects.Proyek.None	1	[{"added": {}}]	33	1
+337	2023-09-02 16:47:42.422781+07	30	projects.Proyek.None	1	[{"added": {}}]	33	1
+338	2023-09-02 16:47:54.319788+07	31	projects.Proyek.None	1	[{"added": {}}]	33	1
+339	2023-09-02 16:48:05.828171+07	32	projects.Proyek.None	1	[{"added": {}}]	33	1
+340	2023-09-02 16:48:26.804826+07	33	projects.Proyek.None	1	[{"added": {}}]	33	1
+341	2023-09-02 16:50:39.962057+07	8	purpose-WTA Tennis - Tableau	1	[{"added": {}}]	29	1
+342	2023-09-02 16:51:22.035391+07	9	purpose-Pizza Places - Python Dash	1	[{"added": {}}]	29	1
+343	2023-09-02 16:51:44.294298+07	10	purpose-Pizza Places - Python Dash	1	[{"added": {}}]	29	1
+344	2023-09-02 16:52:07.728638+07	11	purpose-Pizza Places - Python Dash	1	[{"added": {}}]	29	1
+345	2023-09-02 16:52:21.281176+07	12	purpose-Pizza Places - Python Dash	1	[{"added": {}}]	29	1
+346	2023-09-02 16:52:31.620374+07	11	purpose-Pizza Places - Python Dash	2	[{"changed": {"fields": ["Isi", "Heading"]}}]	29	1
+347	2023-09-02 16:52:40.736522+07	10	purpose-Pizza Places - Python Dash	2	[{"changed": {"fields": ["Isi", "Heading"]}}]	29	1
+348	2023-09-02 16:53:07.425316+07	13	purpose-Pizza Places - Python Dash	1	[{"added": {}}]	29	1
+349	2023-09-02 16:53:22.427986+07	14	purpose-Pizza Places - Python Dash	1	[{"added": {}}]	29	1
+350	2023-09-02 16:53:38.156108+07	15	purpose-Pizza Places - Python Dash	1	[{"added": {}}]	29	1
+351	2023-09-02 16:54:09.443168+07	16	purpose-Get TAxxi - SQL	1	[{"added": {}}]	29	1
+352	2023-09-02 16:54:23.93258+07	17	purpose-Get TAxxi - SQL	1	[{"added": {}}]	29	1
+353	2023-09-02 16:54:37.838627+07	18	purpose-Get TAxxi - SQL	1	[{"added": {}}]	29	1
+354	2023-09-02 16:54:48.563742+07	19	purpose-Get TAxxi - SQL	1	[{"added": {}}]	29	1
+355	2023-09-02 16:55:06.368501+07	20	purpose-Get TAxxi - SQL	1	[{"added": {}}]	29	1
+356	2023-09-02 17:50:00.842285+07	10	dataset-Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+357	2023-09-02 21:32:58.24476+07	1	projects.Proyek.None	1	[{"added": {}}]	34	1
+358	2023-09-02 21:33:35.155508+07	2	projects.Proyek.None	1	[{"added": {}}]	34	1
+359	2023-09-04 19:24:30.00838+07	14	result-Global Terrorism - Python Dash	1	[{"added": {}}]	30	1
+360	2023-09-04 19:25:37.613977+07	15	result-Global Terrorism - Python Dash	1	[{"added": {}}]	30	1
+361	2023-09-04 19:26:14.262849+07	16	result-Global Terrorism - Python Dash	1	[{"added": {}}]	30	1
+362	2023-09-04 19:26:41.393777+07	17	result-Global Terrorism - Python Dash	1	[{"added": {}}]	30	1
+363	2023-09-04 19:33:28.022386+07	34	projects.Proyek.None	1	[{"added": {}}]	33	1
+364	2023-09-04 19:33:47.784276+07	35	projects.Proyek.None	1	[{"added": {}}]	33	1
+365	2023-09-04 19:34:01.064041+07	36	projects.Proyek.None	1	[{"added": {}}]	33	1
+366	2023-09-04 19:34:14.286378+07	37	projects.Proyek.None	1	[{"added": {}}]	33	1
+367	2023-09-04 21:01:19.739088+07	17	result-Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Code"]}}]	30	1
+368	2023-09-04 21:01:45.48363+07	14	result-Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Code"]}}]	30	1
+369	2023-09-04 21:02:21.107171+07	15	result-Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Code"]}}]	30	1
+370	2023-09-04 21:03:00.379812+07	16	result-Global Terrorism - Python Dash	2	[{"changed": {"fields": ["Code"]}}]	30	1
+371	2023-09-04 21:09:10.23192+07	21	purpose-NHTSA - SQL	1	[{"added": {}}]	29	1
+372	2023-09-04 21:09:33.929122+07	22	purpose-NHTSA - SQL	1	[{"added": {}}]	29	1
+373	2023-09-04 21:09:51.5215+07	22	purpose-NHTSA - SQL	2	[]	29	1
+374	2023-09-04 21:10:15.958486+07	23	purpose-NHTSA - SQL	1	[{"added": {}}]	29	1
+375	2023-09-04 21:10:42.246185+07	24	purpose-NHTSA - SQL	1	[{"added": {}}]	29	1
+376	2023-09-04 21:11:02.070438+07	25	purpose-NHTSA - SQL	1	[{"added": {}}]	29	1
+377	2023-09-04 21:22:17.994297+07	3	dataprep-NHTSA - SQL	1	[{"added": {}}]	34	1
+378	2023-09-04 21:23:16.873933+07	3	dataprep-NHTSA - SQL	2	[{"changed": {"fields": ["Image"]}}]	34	1
+379	2023-09-04 21:24:49.512255+07	3	dataprep-NHTSA - SQL	2	[{"changed": {"fields": ["Image"]}}]	34	1
+380	2023-09-04 21:25:32.773932+07	3	dataprep-NHTSA - SQL	2	[]	34	1
+381	2023-09-04 21:26:53.740064+07	18	result-NHTSA - SQL	1	[{"added": {}}]	30	1
+382	2023-09-04 21:27:57.362987+07	19	result-NHTSA - SQL	1	[{"added": {}}]	30	1
+383	2023-09-04 21:28:17.11961+07	19	result-NHTSA - SQL	2	[{"changed": {"fields": ["Gambar"]}}]	30	1
+384	2023-09-04 21:29:46.530229+07	20	result-NHTSA - SQL	1	[{"added": {}}]	30	1
+385	2023-09-04 21:30:04.523924+07	20	result-NHTSA - SQL	2	[{"changed": {"fields": ["Gambar"]}}]	30	1
+386	2023-09-04 21:31:08.715613+07	21	result-NHTSA - SQL	1	[{"added": {}}]	30	1
+387	2023-09-04 21:32:17.774318+07	22	result-NHTSA - SQL	1	[{"added": {}}]	30	1
+388	2023-09-05 08:33:48.007247+07	24	dataset-Supermarket Dashboard - Power BI	1	[{"added": {}}]	28	1
+389	2023-09-05 08:34:24.291776+07	24	dataset-Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+390	2023-09-05 08:35:49.198626+07	24	dataset-Supermarket Dashboard - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+391	2023-09-05 08:39:25.700668+07	4	dataprep-WTA Tennis - Tableau	1	[{"added": {}}]	34	1
+392	2023-09-05 08:39:36.906281+07	4	dataprep-WTA Tennis - Tableau	2	[]	34	1
+393	2023-09-05 08:40:35.506592+07	5	dataprep-WTA Tennis - Tableau	1	[{"added": {}}]	34	1
+394	2023-09-05 08:41:24.420986+07	23	result-WTA Tennis - Tableau	1	[{"added": {}}]	30	1
+395	2023-09-05 08:42:00.419064+07	24	result-WTA Tennis - Tableau	1	[{"added": {}}]	30	1
+396	2023-09-05 08:42:19.425032+07	25	result-WTA Tennis - Tableau	1	[{"added": {}}]	30	1
+397	2023-09-05 08:42:42.063778+07	26	result-WTA Tennis - Tableau	1	[{"added": {}}]	30	1
+398	2023-09-05 08:44:44.588936+07	26	purpose-Air BnB Dashboard - Power BI	1	[{"added": {}}]	29	1
+399	2023-09-05 08:45:04.403473+07	26	purpose-Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Isi", "Heading"]}}]	29	1
+400	2023-09-05 08:45:55.044374+07	27	result-Air BnB Dashboard - Power BI	1	[{"added": {}}]	30	1
+401	2023-09-05 08:46:26.229895+07	28	result-Air BnB Dashboard - Power BI	1	[{"added": {}}]	30	1
+402	2023-09-05 08:46:50.565168+07	29	result-Air BnB Dashboard - Power BI	1	[{"added": {}}]	30	1
+403	2023-09-05 08:48:53.147144+07	9	Pizza Places - Python Dash	2	[{"changed": {"fields": ["Gambar", "Gambar2", "Gambar3"]}}]	20	1
+404	2023-09-05 08:50:19.377163+07	6	dataprep-Pizza Places - Python Dash	1	[{"added": {}}]	34	1
+405	2023-09-05 08:50:46.062932+07	7	dataprep-Pizza Places - Python Dash	1	[{"added": {}}]	34	1
+406	2023-09-05 08:51:55.759317+07	30	result-Pizza Places - Python Dash	1	[{"added": {}}]	30	1
+407	2023-09-05 08:52:57.938712+07	31	result-Pizza Places - Python Dash	1	[{"added": {}}]	30	1
+408	2023-09-05 08:53:44.818306+07	32	result-Pizza Places - Python Dash	1	[{"added": {}}]	30	1
+409	2023-09-05 08:54:23.982848+07	33	result-Pizza Places - Python Dash	1	[{"added": {}}]	30	1
+410	2023-09-05 08:55:03.825692+07	34	result-Pizza Places - Python Dash	1	[{"added": {}}]	30	1
+411	2023-09-05 08:55:30.529741+07	34	result-Pizza Places - Python Dash	2	[{"changed": {"fields": ["Code"]}}]	30	1
+412	2023-09-05 08:56:13.441887+07	35	result-Pizza Places - Python Dash	1	[{"added": {}}]	30	1
+413	2023-09-05 08:56:50.382048+07	34	result-Pizza Places - Python Dash	2	[{"changed": {"fields": ["Gambar"]}}]	30	1
+414	2023-09-05 08:58:33.810211+07	33	result-Pizza Places - Python Dash	2	[{"changed": {"fields": ["Gambar"]}}]	30	1
+415	2023-09-05 09:00:40.932836+07	8	dataprep-Get TAxxi - SQL	1	[{"added": {}}]	34	1
+416	2023-09-05 09:01:33.289592+07	9	dataprep-Get TAxxi - SQL	1	[{"added": {}}]	34	1
+417	2023-09-05 09:02:19.441186+07	10	dataprep-Get TAxxi - SQL	1	[{"added": {}}]	34	1
+418	2023-09-05 09:03:30.925553+07	36	result-Get TAxxi - SQL	1	[{"added": {}}]	30	1
+419	2023-09-05 09:04:58.49306+07	37	result-Get TAxxi - SQL	1	[{"added": {}}]	30	1
+420	2023-09-05 09:05:44.56207+07	38	result-Get TAxxi - SQL	1	[{"added": {}}]	30	1
+421	2023-09-05 09:06:11.84275+07	39	result-Get TAxxi - SQL	1	[{"added": {}}]	30	1
+422	2023-09-05 09:08:05.629355+07	2	dataset-Food story - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+423	2023-09-05 09:08:32.177699+07	21	dataset-Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+424	2023-09-05 09:08:48.441336+07	22	dataset-Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+425	2023-09-05 09:10:07.866468+07	20	dataset-Air BnB Dashboard - Power BI	2	[]	28	1
+426	2023-09-05 09:10:56.542777+07	22	dataset-Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+427	2023-09-05 09:11:22.717777+07	21	dataset-Air BnB Dashboard - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+428	2023-09-05 09:11:31.388103+07	21	dataset-Air BnB Dashboard - Power BI	2	[]	28	1
+429	2023-09-05 09:12:06.469559+07	3	dataset-Food story - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+430	2023-09-05 09:12:45.873005+07	4	dataset-Food story - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+431	2023-09-05 09:13:03.045545+07	5	dataset-Food story - Power BI	2	[{"changed": {"fields": ["Link", "ContentLink"]}}]	28	1
+432	2023-09-05 09:14:54.611799+07	10	Portofolio - Python Django	1	[{"added": {}}]	26	1
+433	2023-09-05 09:16:16.587167+07	27	purpose-Portofolio - Python Django	1	[{"added": {}}]	29	1
+434	2023-09-05 09:16:49.927204+07	28	purpose-Portofolio - Python Django	1	[{"added": {}}]	29	1
+435	2023-09-05 09:17:27.466381+07	29	purpose-Portofolio - Python Django	1	[{"added": {}}]	29	1
+436	2023-09-05 09:18:09.430946+07	30	purpose-Portofolio - Python Django	1	[{"added": {}}]	29	1
+437	2023-09-05 09:18:26.040832+07	29	purpose-Portofolio - Python Django	2	[{"changed": {"fields": ["Isi", "Heading"]}}]	29	1
+438	2023-09-05 09:18:38.910756+07	30	purpose-Portofolio - Python Django	2	[{"changed": {"fields": ["Isi", "Heading"]}}]	29	1
+439	2023-09-05 09:22:28.838438+07	40	result-Portofolio - Python Django	1	[{"added": {}}]	30	1
+440	2023-09-05 09:23:42.444381+07	41	result-Portofolio - Python Django	1	[{"added": {}}]	30	1
+441	2023-09-05 09:24:44.306763+07	42	result-Portofolio - Python Django	1	[{"added": {}}]	30	1
+442	2023-09-05 09:25:27.491863+07	43	result-Portofolio - Python Django	1	[{"added": {}}]	30	1
+443	2023-09-05 09:26:07.433481+07	44	result-Portofolio - Python Django	1	[{"added": {}}]	30	1
+444	2023-09-05 09:26:42.801669+07	45	result-Portofolio - Python Django	1	[{"added": {}}]	30	1
+445	2023-09-05 09:27:14.136653+07	46	result-Portofolio - Python Django	1	[{"added": {}}]	30	1
+446	2023-09-05 09:28:39.176717+07	25	dataset-Portofolio - Python Django	1	[{"added": {}}]	28	1
+447	2023-09-05 10:44:33.072951+07	11	Portofolio - Python Django	2	[{"changed": {"fields": ["Tanggal"]}}]	20	1
+\.
+
+
+--
+-- TOC entry 3614 (class 0 OID 16573)
+-- Dependencies: 217
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.django_content_type (id, app_label, model) FROM stdin;
+1	admin	logentry
+2	auth	permission
+3	auth	group
+4	auth	user
+5	contenttypes	contenttype
+6	sessions	session
+7	about	about
+8	about	summary
+9	about	content
+10	about	summaries
+11	education	certification
+12	education	school
+13	education	projectexp
+14	education	workexp
+15	skill	skills
+16	skill	skill
+17	projects	project
+18	projects	projects
+19	services	offer
+20	projects	proyek
+21	projects	image
+22	projects	resultrec
+23	contact	contactmodel
+24	projects	report
+25	projects	backgroundndataset
+26	projects	background
+27	projects	backgroundproject
+28	projects	dataset
+29	projects	purpose
+30	projects	result
+31	projects	isiresult
+32	projects	recommendation
+33	projects	insight
+34	projects	dataprep
+\.
+
+
+--
+-- TOC entry 3612 (class 0 OID 16565)
+-- Dependencies: 215
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2023-08-09 12:15:52.354132+07
+2	auth	0001_initial	2023-08-09 12:15:53.528006+07
+3	admin	0001_initial	2023-08-09 12:15:54.038654+07
+4	admin	0002_logentry_remove_auto_add	2023-08-09 12:15:54.068667+07
+5	admin	0003_logentry_add_action_flag_choices	2023-08-09 12:15:54.093664+07
+6	contenttypes	0002_remove_content_type_name	2023-08-09 12:15:54.157503+07
+7	auth	0002_alter_permission_name_max_length	2023-08-09 12:15:54.237542+07
+8	auth	0003_alter_user_email_max_length	2023-08-09 12:15:54.337535+07
+9	auth	0004_alter_user_username_opts	2023-08-09 12:15:54.367542+07
+10	auth	0005_alter_user_last_login_null	2023-08-09 12:15:54.397547+07
+11	auth	0006_require_contenttypes_0002	2023-08-09 12:15:54.40755+07
+12	auth	0007_alter_validators_add_error_messages	2023-08-09 12:15:54.437555+07
+13	auth	0008_alter_user_username_max_length	2023-08-09 12:15:54.56758+07
+14	auth	0009_alter_user_last_name_max_length	2023-08-09 12:15:54.622592+07
+15	auth	0010_alter_group_name_max_length	2023-08-09 12:15:54.692603+07
+16	auth	0011_update_proxy_permissions	2023-08-09 12:15:54.737611+07
+17	auth	0012_alter_user_first_name_max_length	2023-08-09 12:15:54.772618+07
+25	education	0001_initial	2023-08-12 10:33:58.774818+07
+26	about	0001_initial	2023-08-12 10:38:32.479652+07
+27	education	0002_alter_certification_certifier_and_more	2023-08-12 10:53:57.392139+07
+28	education	0003_alter_school_year	2023-08-12 10:58:47.898002+07
+29	education	0004_projectexp_workexp	2023-08-12 11:08:42.090869+07
+31	skill	0001_initial	2023-08-12 16:25:32.828595+07
+34	services	0001_initial	2023-08-14 09:14:26.059861+07
+36	projects	0001_initial	2023-08-15 11:50:31.053162+07
+37	projects	0002_alter_proyek_category	2023-08-15 12:04:16.139855+07
+38	projects	0003_image_alter_proyek_category_remove_proyek_gambar_and_more	2023-08-15 22:29:22.786081+07
+39	projects	0004_alter_image_image	2023-08-15 23:54:08.365521+07
+40	projects	0005_proyek_gambar2_proyek_gambar3_proyek_gambar4_and_more	2023-08-16 00:02:28.658834+07
+41	projects	0006_delete_image_alter_proyek_gambar_and_more	2023-08-16 00:13:06.021045+07
+42	projects	0007_proyek_insandrecm_proyek_background_proyek_dataset_and_more	2023-08-16 13:04:38.010871+07
+43	projects	0008_resultrec_proyek_slug	2023-08-17 22:40:58.713245+07
+44	projects	0009_alter_proyek_slug	2023-08-17 22:45:39.9085+07
+45	projects	0010_delete_resultrec	2023-08-17 23:45:29.313588+07
+46	projects	0011_alter_proyek_slug	2023-08-18 08:24:21.717544+07
+47	projects	0012_alter_proyek_slug	2023-08-18 09:27:42.474543+07
+48	projects	0013_remove_proyek_slug	2023-08-18 09:31:01.150776+07
+49	projects	0014_proyek_slug	2023-08-18 09:56:11.211657+07
+50	projects	0015_remove_proyek_slug	2023-08-18 10:05:00.710085+07
+51	projects	0016_proyek_slug	2023-08-18 10:07:58.024035+07
+52	projects	0017_remove_proyek_slug	2023-08-18 10:11:42.112191+07
+53	projects	0018_proyek_slug	2023-08-18 10:12:18.770478+07
+54	projects	0019_alter_proyek_slug	2023-08-18 10:15:08.57704+07
+55	contact	0001_initial	2023-08-19 11:11:07.960895+07
+56	education	0005_school_finish_alter_projectexp_year_and_more	2023-08-22 12:05:58.959442+07
+57	education	0006_certification_finish_projectexp_finish_and_more	2023-08-22 12:06:26.692716+07
+58	services	0002_offer_icon	2023-08-28 20:55:10.084366+07
+59	services	0003_remove_offer_icon	2023-08-28 21:14:38.148289+07
+60	services	0004_offer_icon	2023-08-28 21:14:38.170457+07
+61	education	0007_remove_projectexp_jobdesk_remove_workexp_jobdesk_and_more	2023-08-30 14:06:07.589457+07
+62	education	0008_projectexp_jobdesk4_workexp_jobdesk4	2023-08-30 14:26:42.075939+07
+63	education	0009_workexp_company	2023-08-30 15:26:54.025813+07
+76	projects	0002_backgroundproject	2023-09-01 20:49:25.053054+07
+77	projects	0003_rename_backgroundproject_background	2023-09-01 22:02:48.92038+07
+78	projects	0004_purpose_dataset	2023-09-01 22:20:21.734052+07
+79	projects	0005_dataset_link	2023-09-02 08:58:29.847555+07
+80	projects	0006_result	2023-09-02 10:03:24.568781+07
+81	projects	0007_remove_result_result_isiresult_result_result	2023-09-02 10:08:03.645559+07
+82	projects	0008_delete_isiresult	2023-09-02 10:11:30.048686+07
+83	projects	0009_remove_result_result_result_result	2023-09-02 10:13:48.040774+07
+84	projects	0010_remove_result_result_result_isi_and_more	2023-09-02 10:16:27.564787+07
+85	projects	0011_result_gambar	2023-09-02 10:19:13.081217+07
+86	projects	0012_recommendation_insight	2023-09-02 11:44:40.553572+07
+87	projects	0013_purpose_heading	2023-09-02 14:20:48.075456+07
+88	projects	0014_delete_purpose	2023-09-02 14:29:02.264903+07
+89	projects	0015_purpose	2023-09-02 14:32:13.370903+07
+90	projects	0016_alter_purpose_isi	2023-09-02 14:34:08.763761+07
+91	projects	0017_delete_dataset	2023-09-02 15:16:36.669619+07
+92	projects	0018_dataset	2023-09-02 15:17:45.097745+07
+93	projects	0019_dataprep	2023-09-02 21:29:13.448332+07
+94	projects	0020_result_code	2023-09-04 20:59:55.680199+07
+95	projects	0021_alter_result_code	2023-09-04 20:59:55.711333+07
+96	projects	0022_remove_result_code	2023-09-04 20:59:55.742584+07
+97	projects	0023_result_code	2023-09-04 20:59:55.780363+07
+98	projects	0024_alter_dataprep_image	2023-09-04 21:22:07.321696+07
+99	projects	0025_alter_dataprep_code	2023-09-05 08:39:12.060385+07
+\.
+
+
+--
+-- TOC entry 3629 (class 0 OID 16701)
+-- Dependencies: 232
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
+1j8bqwlruk9uzbmqfmeku1i59d1rs3ky	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTbab:fZhmTGYNZQ0MTSw6RCynytvLvtVud7d6gv21yUX7REE	2023-08-23 12:18:33.361454+07
+4adnt70kb5tg2ro39dn8gv7pl1i1azxr	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTduS:QCIgUPHd5Wcp5a4jNExsb-jovgZjcadVGqFzSsVYyr0	2023-08-23 14:47:12.428373+07
+nrmdkekh46qtv4dvynexmwmyvy40x9vt	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTeMy:L3LNRVGGixO4is8G-eUNGEjcNy5R5z6z6YG7ahej5Vs	2023-08-23 15:16:40.528413+07
+c9q0j97xb9bhgigo3imd9g6zpc1ha0g2	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTeSL:ZW1fOLaU_hovv2eUn9MaJ3KgXp4LhkBkkbVj9VNSn1I	2023-08-23 15:22:13.747309+07
+f4w9wa5kcoidimc845lplmitir4lb3xh	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTebX:IZnf21N4el-7eqERuPoQaoYyqDRmY3BETMJq-5JVY18	2023-08-23 15:31:43.044647+07
+ilo3l7zxwd6tq7t5m5zpca0hl34535m2	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTr4y:wLmqXvtN22da4QP0fnzVU6Z69ChmQBjW1kGWnpFQ3jo	2023-08-24 04:50:56.89562+07
+ns42v4my36y7tgxaea42ll3scit3qs09	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTr5D:UtBmf53Otg966Vj8Qf4O46IZEJ6VyzLOPtTRWFXVg2k	2023-08-24 04:51:11.715318+07
+zbzx5n57bsktycibykv91s8q0zq97ar1	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qTref:Marzrnuxt972jOczNzt9i0DsKzNDZpwTzoBW-rYy7nw	2023-08-24 05:27:49.300502+07
+dgxiha0dg9sisots2i8ufmiwc2do23ss	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qU0HE:tRNPh5bnC3MohlOCcp8QKvELnssCjyaP9eWxIBG5_VM	2023-08-24 14:40:12.257265+07
+ucg0xjr3vdmpotkth9ew9562pf7ykr92	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qU1Sm:ikTROQOHfqoOVC82JZkahrNPTybRGWdc4dmsAx50agA	2023-08-24 15:56:12.641809+07
+frkpsnsneuv49h1gzhggeop62v8fhg8o	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qUO7E:-8MO2qG3UxWTgfBpzq__r3CkKvfNiROvK_rNZa6j488	2023-08-25 16:07:28.616335+07
+1fna6uoar6gg3mawroncrurtys0ownwl	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qUdMS:cDePHfjw5IfhgemqZngz9XNOOGg10tW1Cj1_OcCHWOo	2023-08-26 08:24:12.474927+07
+v9mnfrhlvrahtrm5nprv9uvogqpmyyjs	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qUf8z:p9rh76Zm9cAv__3JKTWdG7U5jOjcWU_vLgxjLdUEI6o	2023-08-26 10:18:25.454701+07
+dh6e4grxx0xlgcqgtonedddfduh9p7ik	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qUimb:zRDR3j8b7AlqWh6gXIjW-JQtHWOy6osOQwPSa5ZqR0o	2023-08-26 14:11:33.560918+07
+ejr4qmqry2e6foqdk9zlics571hl3m9c	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qUkPf:ahSNrTWvCOvLXCVUAOItHpsbCuHADnlLJemfaZ1Rf10	2023-08-26 15:55:59.519663+07
+hkbg4wio8f85p6if4kkiz092qnwndu7p	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVM5v:pyYxXzoZHvadk1ecx3RUn4KPGVLbog6GtpKfijVK53Y	2023-08-28 08:10:07.234672+07
+jdybzp8jimun85txhgxma4dlo4zesvig	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVN6a:dFaxdiFIVaYjmQSnyz3NvOLpzNaKEx3BOQJrycYa6F4	2023-08-28 09:14:52.846676+07
+b6xyzfzot23ajmjbek78tk8tr08rln8m	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVlIG:oBk1ya5YJYCJxL2q4pwdXwgJ1VqqVHFBsWQtyJijlxk	2023-08-29 11:04:32.488437+07
+ya1hyxes06rbhykq0nw1uj2vl2mgssrr	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVnLZ:TXogQ8-FfXvS-nFoDCy4mA8JiXljGs4MK9Wc8M6HY70	2023-08-29 13:16:05.612339+07
+9lg2o25b4cz47r69mcdeobg36rj7cyts	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVoZk:ymIcAGk09odOuCWaFrs4DvsvH6yG7JNaY6xJBF_ttcI	2023-08-29 14:34:48.321285+07
+fugrvy3emcs0bxnj4gi8kndgwt8uhv7k	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVpfR:LTbZaw6sdmYGpSjwYq1cYuRVzRHMHCMLP_dgcSuGT74	2023-08-29 15:44:45.325053+07
+ef4qnekm75mowl7ytbanlz2urgp31nhv	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVv3w:WLj7VtROMP0tfhm4E0JJ6FLw8yv5d85lt3_1uGCVN9Q	2023-08-29 21:30:24.94786+07
+18brhc0s6jruw7sjrrt5gkqbjv2cdp9y	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qVxgi:QDwSwxHWgCsITLdTdwVMAsarkMXMYESpyOfJTmdEESk	2023-08-30 00:18:36.454727+07
+7luh1st45a6p996r07g851dpq5bp5v9y	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qW4Jo:FyZaXahRdW-p341xsCUwwPbUBAs3__ClCENGMqxAUrE	2023-08-30 07:23:24.115342+07
+rb69wgnzebv2tdtivb7iwyw7eqf0li3v	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qW9K2:fhfZ_wiKNWS7Y_6EHprYWvbHZtqnsUN_8C2GPaIIJ4o	2023-08-30 12:43:58.410641+07
+su8eukheaqnpjlt4sqises411c2mvf62	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qW9eW:78EghTA3ld01NeUGNriu7_ygppLOG4i88k2pl0X8SKw	2023-08-30 13:05:08.955967+07
+4w1teuy9zevjxp5gd31ugf8o813dcw4f	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qWGPW:-4ewWpzcqelZznNPIvJ2rQIz2B2PfVK8DN8G4DjSLUI	2023-08-30 20:18:06.707881+07
+bkmz739aw4e77893yv9lldbpc8nvokhw	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qWSDe:r5VpmWeKNgERCD1Phagf-YXDAFlKIavG-qpeHpVMvis	2023-08-31 08:54:38.640433+07
+t3305md6g0ovtmrkjeow90557s30rwj3	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qWfEp:GbzS90qgf_tBTTUy2fISyKx9oiyR6Q8Zoh_z_MANqrE	2023-08-31 22:48:43.675926+07
+sacnryzvqqxhhn7ta7h4nk1b86mjy63g	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qWg3J:yXJmdT_zP1PrSg8SPNjKSlRCvfyOQSciBCqyllScETk	2023-08-31 23:40:53.680401+07
+dm8codvjlcufqfg4ew2pg55q6l1uo121	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qWnsj:TqLBUyceFzfqW5zO8DQeUFPbQnLRpepiGxJJf1Bi278	2023-09-01 08:02:29.241686+07
+f9dedb8qvcsh9liyp1v5kkqm875w9gxh	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qWoEL:gVopfzVi2zYwWQKAh4Yuy2bjjFkQH0bnACGIwyPPHEQ	2023-09-01 08:24:49.179498+07
+97oyigecyzetaeink7f1pitk5cft1c3t	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qWq36:XduRVAcUrw6q1XEuEoKbkQb8y2yf3ANO6tVQ1hWBxv0	2023-09-01 10:21:20.244593+07
+8iye5ifqosm36uit76wd2ht2ac1wd7tw	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qXDSu:8zBbGegasnm6nH7kdNKXZwixICiSr8Qw-XKatm94VgA	2023-09-02 11:21:32.871217+07
+up32mj61cfbvsi8woyhhzmi03763trik	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qY1zM:-7dMlbaM1iiYn9wc8LTcuuAAHkuxjzWR62Fi2K9gNQY	2023-09-04 17:18:24.758166+07
+1f0vmdxvreg84hu74318yyu81z4hsykz	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qYJc3:Ek8Nemz8ZcHb0-xoS6b2E10NTT30gTPciPuK9OXgGic	2023-09-05 12:07:31.065274+07
+4drm3meds4zuchb9pcevqj67mir94hrx	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qacia:eDZkoucHxeNaVtH-Dx6Ay7ydGM-4N3OPAJXP1Cua1ZY	2023-09-11 20:55:48.480943+07
+xpui4lz1n1cids39lv6bgdzd5hw5lokx	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qad1L:qDNQ4Pz7tIez5vnlrMUuj_PzbEHm4QCyVerfOK1Bua0	2023-09-11 21:15:11.767369+07
+2kgcsm7ciw67ykv2gj32n5k7qxkfr30u	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qadQn:vdMxMvZ7tQ41sa2xXvzteLyWoBziRtlIwvVupZuaoJY	2023-09-11 21:41:29.331912+07
+mmer054tl90drrctq8ibg2a4i57xm8we	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qapmt:v3R1SMwmDBVynB4pFr9JEMSPauneMSoprYPpANFs3G0	2023-09-12 10:53:07.404713+07
+w6ydlvuowjuxrauux5p9z5490dztk2sy	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qaz49:wA-oCru2cDf2ikcaeoClGAXGnSBHpZc5LsvXQty188E	2023-09-12 20:47:33.060067+07
+8bxy9nmr9acsfafyufdtgocdqm98s9dh	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qbEep:cy3RNXrFNj1O93fa50SjqQBNoNyIAnkWhyEg-uyAlSE	2023-09-13 13:26:27.151495+07
+1823d2ttzsyjp6im9wk9itf8bcoc6cax	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qbFLl:XBv6gil8yhuebV1ogqqatbuzHYpGa2CmDbmSFnkYlLs	2023-09-13 14:10:49.439207+07
+xgux5ftx8qc0nszzrp51mmjd1ip0vcve	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qbG3S:tTpbaQsUNJVJvkqBjp8OVLmrolJ3IiqYFf3TTI3rCPU	2023-09-13 14:55:58.286167+07
+g3hdpss6f7omb195on97eygerpiang6c	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qbGWQ:4sP28gnHYlUdKoNZuOTGOG3080_29Uor7dAO5QB8Lz8	2023-09-13 15:25:54.40807+07
+bp9aaqil51vfln6l497ukz1t4iz3trx4	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qbI51:0aAtbNA3Dd5pV5nS_qDW2zvaMRxhQDTHCmRT_AVtKCs	2023-09-13 17:05:43.895698+07
+kmhv2faodoil286w5ey0fupykgctjre3	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qbxmj:4tUrwQxic0EitN3NOx26pmzoBuOAQAnHBAFm68QqsMY	2023-09-15 13:37:37.640117+07
+g9pios9b4m1z0downt3vsh1qvjh66z1i	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qc3KK:qQdxtoZVIfTkpNp5PviUFhhIeFLX9umWFEQW3_I61UE	2023-09-15 19:32:40.442082+07
+t5eu7571iniybwgwwim1ra6tj7v9bhok	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qc5NB:d8_B3s9hHsem8H8vgG2O1Xv1NSing3dM1r1proeImhk	2023-09-15 21:43:45.706738+07
+ulcu46d52qkyjzfalfwegwhnj0jn4bor	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcDUr:VoaIqG-kis91i6kaQW2xnULlnLxx5Hpn0nkfQ7OSnPg	2023-09-16 06:24:13.095044+07
+yj1vx6zq0e38c3rbhew76lyaqbq0z8zd	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcIVN:04QWow7doEKhVeLAvf1txxiqUo54nMKaJVDCXh9eMFU	2023-09-16 11:45:05.740095+07
+ue4g94211w0mp6ntouzbr62vpxfz0uew	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcJZS:TvHM2JIatVR3bJsi-YSTSEkqn9nrCbbJkHgTCFrqwlw	2023-09-16 12:53:22.005067+07
+j4rwgqu7xa1q6f8jzk4iudllre98try1	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcKpa:DbFsgxsOHRH1DtMK4HRII_9ClCmyhB6vHLC6o8MOX-Y	2023-09-16 14:14:06.877192+07
+swlelfa71vq3z42pmf7d16zprjen0rco	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcLj8:lcQ3-PDU2hqGNiHDujQttiXZty0wRsLRcGi6BET8aOI	2023-09-16 15:11:30.941549+07
+fd6ta9i1gohns9ko5obi94g0k0issebu	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcMuq:ZaRsjHX4WKZIg_Nr5HEOXZaRFqGxnVNmJaWCXVT6CYc	2023-09-16 16:27:40.49643+07
+hdhv07o57gik38pobpzceb43zu38bqiu	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcOBA:_TdSimCiPDGG-Etst7ROUuLZm21t1gbHli8KXGbNnaY	2023-09-16 17:48:36.006626+07
+duag3epxuukkz5f178mwjc5jcylv694r	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcRUL:5Re3BqSil6iBiTE5_iDm8n3eB2e1CjZC1YymNPQl-IY	2023-09-16 21:20:37.716388+07
+8xuk88xw2lfujiurbflvyl8iggaclspt	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qcRxx:rwKkJrh_MYQ8drAY6eqTg4vSUgFvfcSp34mTTZ_oWRs	2023-09-16 21:51:13.193192+07
+gzrqw9qm2czwcqgilschnft8pks1ghbi	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qd8ab:dQfRQ8SHv-FYsMW84BhgIvG80A8iMvxChhO9oJfkvdA	2023-09-18 19:21:57.670106+07
+4we5s7806btxyj9ruozzoba3flzcv6ee	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qd8lR:oEQoD6f6VyV6akE-OohKTwTYnHvNMvbRGxWvspLa9oA	2023-09-18 19:33:09.901671+07
+v6p2cq7144zcf602ifd42tr243ea7sk4	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qdA4s:i-GsXC2RvQmDxC_gmryIKEKz0frWLHPGrRRC3pYYLjw	2023-09-18 20:57:18.79365+07
+ehhm0lp2ab2w9tbzdpjcgr3qj7jdtwcl	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qdAG2:cOFclneh5q_CUZEkbubGtmNcHpjXmGKLJeZJgWQAVm8	2023-09-18 21:08:50.497992+07
+v2cb1w6gfhkpwbdx1feh8kfxlsm86rox	.eJxVjEsOAiEQBe_C2hAa-bp07xlIQ4OMGkiGmZXx7oZkFrp9VfXeLOC-1bCPvIaF2IUBO_1uEdMztwnoge3eeeptW5fIp8IPOvitU35dD_fvoOKosxZUyFoqSogitVZJZu8VWSB3FhqkQa0zQfEJVHEo0GOKSTujDCA59vkC6G84Aw:1qdKvf:uKipv71YYNJUgLjsJrmorMLPkcOMm6NS12BAWpN4HFM	2023-09-19 08:32:31.184172+07
+\.
+
+
+--
+-- TOC entry 3631 (class 0 OID 24785)
+-- Dependencies: 234
+-- Data for Name: education_certification; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.education_certification (id, major, year, certifier, finish) FROM stdin;
+3	Problem Solving Type Training	Nov 2020	PT Indonesia Epson Industry	2020-11-20
+2	Ms. Excel Intermediate	Augst 2022	PT. Digita Scientia Indon	2022-08-03
+1	Data Analyst	2022-2023	Refocus Digital Academy	2023-05-03
+\.
+
+
+--
+-- TOC entry 3637 (class 0 OID 24806)
+-- Dependencies: 240
+-- Data for Name: education_projectexp; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.education_projectexp (id, title, year, city, background, finish, jobdesk1, jobdesk2, jobdesk3, jobdesk4) FROM stdin;
+2	Refocus Data Analyst Project NHTSA	2022	Jakarta	help the National Highway Traffic Safety Administration (NHTSA), NHTSA is one of the government departments government department in the United States that focuses on reducing the number of traffic accidents on highways. NHTSA is currently working on new regulations that will be implemented next year.	2022-12-31	Search the new finding in the data that related with the traffic accident in USA states	Analyze the current condition of traffic accident based on NHTSA 2020 data in USA using SQL and google spreadsheet		Successfully make a proﬀesional interactive report and give recommendation to NHTSA (National Highway Traffic Safety Administration) for new regulation to reduce the traffic accident in USA.
+1	Refocus Data Analyst Project Food Story	2022	Jakarta	This project is to help food story , a cloud kitchen industry to make dashboard for developing their business.	2023-04-03	Provide recommendations to improve their business	Analyze the condition business of foodstory by making a dashboard microsoft power BI		Successfully make a profesional interactive dashboard for improve the business of food story and give some recommendations.
+\.
+
+
+--
+-- TOC entry 3633 (class 0 OID 24791)
+-- Dependencies: 236
+-- Data for Name: education_school; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.education_school (id, major, year, college, finish) FROM stdin;
+1	Mechatronics Eng.	2010-2013	Politeknik Kota Malang	2013-10-03
+2	Electric Eng.	2020 - not finish	University of Trisakti	2022-03-03
+\.
+
+
+--
+-- TOC entry 3639 (class 0 OID 24814)
+-- Dependencies: 242
+-- Data for Name: education_workexp; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.education_workexp (id, title, year, city, finish, jobdesk1, jobdesk2, jobdesk3, jobdesk4, company) FROM stdin;
+2	Staff Maintenance	2015	Batam, Kep. Riau	2015-11-03	Analyze the problem, maintain and make improvement for preventing in more than 15 machines.				PT Epson Batam
+1	Mechanical Asssembly Staff	2016	Bekasi	2021-12-03	Assembly parts to ready to use machine.	Analyze and solve problems that occur during the assembly process and create reports using excel.	Analyze, research and improve machine safety ,quality, productcvity and efficiency by using a measurement data.	Successfully can lead, manage, and finish more than 15 assembly and set up machine project.	PT Indonesia Epson Industry
+\.
+
+
+--
+-- TOC entry 3649 (class 0 OID 57804)
+-- Dependencies: 252
+-- Data for Name: projects_background; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_background (id, background, "namaProject_id") FROM stdin;
+2	I am a data analyst in a supermarket and my co-partner give a dataset to analyze and presence it to the CEO and manager.	4
+3	Foodstory is a cloud kitchen industry that has several branches in Indonesia, especially in Jabodetabek, they want to increase their business .	3
+4	This is project from stratascratch with level medium category of difficulty .	10
+5	I have finished my course in refocus, and now my boss challenge me to make a dashboard for Air BnB	5
+6	NHTSA is one such department government in the United States focused on reducing the number traffic accident on the highway. Currently NHTSA is brewing a new regulation that will be implemented next year. I was asked to analyze the data collected during 2021. This data is a complete information about accidents that occurred during 2021.	6
+7	This is my personal project and I use postgresql to do. This project is about gettaxi, is an Israeli-developed technology platform solely focused on corporate Ground Transportation Management (GTM). They have an application where clients can order taxis, and drivers can accept their rides (offers). At the moment, when the client clicks the Order button in the application, the matching system searches for the most relevant drivers and offers them the order. In this task, we would like to investigate some matching metrics for orders that did not completed successfully, i.e., the customer didn't end up getting a car	7
+8	I work as an analyst for the Pizza Place restaurant. My boss asked you to analyze the restaurant's performance in 2015.	9
+9	This is my personal project, and I want to make a project based on something that I love, that's tennis in fact I love to play and watch tennis since junior high school .	8
+10	This is my personal project with Django	11
+\.
+
+
+--
+-- TOC entry 3671 (class 0 OID 58073)
+-- Dependencies: 274
+-- Data for Name: projects_dataprep; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_dataprep (id, heading, code, image) FROM stdin;
+1	Data Validation	import pandas as pd\r\ndata= pd.read_csv("data.csv")\r\ndata.isnull().sum()/len(data)*100	Terror3.png
+2	Data Duplicate Checking	data.duplicated('eventid').any() #Checking whetevr any duplicate data in data order column event_id	Terror4.png
+3	Data Validation	count(consecutive_number) from crash ;-- to count consecutive number (unique code in every traffic accident)\r\nselect count(distinct consecutive_number) from crash ; -- data is equivalent with previous queery\r\nselect distinct state_name from crash ; --no abnormal data\r\nselect max(number_of_vehicle_forms_submitted_all), min(number_of_vehicle_forms_submitted_all) from crash ; --no abnormal data\r\nselect max(number_of_motor_vehicles_in_transport_mvit), min(number_of_motor_vehicles_in_transport_mvit) from crash; --no abnormal data\r\nselect max(number_of_parked_working_vehicles), min(number_of_parked_working_vehicles) from crash; --no abnormal data\r\nselect max(number_of_forms_submitted_for_persons_not_in_motor_vehicles), min(number_of_forms_submitted_for_persons_not_in_motor_vehicles) from crash --no abnormal data ;\r\nselect max(number_of_persons_in_motor_vehicles_in_transport_mvit), min(number_of_persons_in_motor_vehicles_in_transport_mvit) from crash ; --no abnormal data\r\nselect max(number_of_persons_not_in_motor_vehicles_in_transport_mvit), min(number_of_persons_not_in_motor_vehicles_in_transport_mvit) from crash ; --no abnormal data\r\nselect distinct land_use_name from crash ; --no abnormal data\r\nselect distinct functional_system_name from crash ; --no abnormal data\r\nselect min(milepoint),max(milepoint) from crash ; --no abnormal data\r\nselect distinct manner_of_collision_name from crash ;--no abnormal data\r\nselect distinct type_of_intersection_name from crash ;--no abnormal data\r\nselect distinct light_condition_name from crash ;--no abnormal data\r\nselect distinct atmospheric_conditions_1_name from crash ;--no abnormal data\r\nselect distinct number_of_fatalities from crash ; --no abnormal data\r\nselect distinct number_of_drunk_drivers from crash ; --no abnormal data\r\nselect min(timestamp_of_crash),max(timestamp_of_crash) from crash ; -- found that time is not in local state of USA, so it must to convert to local time	
+4	Joining Files		tennis_4.png
+5	Pivoting Coloumn 'winner name' and 'looser name'		tennis_5.png
+6	Data Validation	import pandas as pd\r\nimport seaborn as sns\r\nimport matplotlib.pyplot as plt\r\nimport calendar\r\n\r\norder= pd.read_csv("orders.csv")\r\norder_detail= pd.read_csv("order_details.csv")\r\npizzas= pd.read_csv("pizzas.csv")\r\norder_detail.isnull().any() #Checking data blank in file order_detail\r\npizzas.isnull().any() #Checking data blank in file pizzas	
+7	Data Duplicate Checking	order.duplicated('order_id').any() #Checking whetevr any duplicate data in data order column order_id	
+8	Data Validation	--data validation\r\n\r\nselect min(order_datetime),max(order_datetime) from public.data_order --no found abnormal data--\r\n\r\nselect min(origin_longitude),max(origin_longitude) from public.data_order --no found abnormal data--\r\n\r\nselect min(origin_latitude),max(origin_latitude) from public.data_order --no found abnormal data--\r\n\r\nselect min(m_order_eta),max(m_order_eta) from public.data_order --no found abnormal data--\r\n\r\nselect min(order_gk),max(order_gk) from public.data_order --no found abnormal data--\r\n\r\nselect min(order_status_key),max(order_status_key) from public.data_order --no found abnormal data--\r\n\r\nselect min(is_driver_assigned_key),max(is_driver_assigned_key) from public.data_order --no found abnormal data--\r\n\r\nselect min(cancellations_time_in_seconds),max(cancellations_time_in_seconds) from public.data_order --no found abnormal data--	
+9	Data Duplicate Checking	--data duplicate checking\r\n\r\nselect order_datetime,origin_longitude, origin_latitude, m_order_eta, order_status_key,is_driver_assigned_key,cancellations_time_in_seconds, count(*)\r\n\r\nfrom public.data_order\r\n\r\ngroup by order_datetime,origin_longitude, origin_latitude, m_order_eta, order_status_key,is_driver_assigned_key,cancellations_time_in_seconds\r\n\r\norder by count(*) desc	data_duplicate.png
+10	Data Cleansing	--removing duplicate data\r\n\r\ndelete from public.data_order\r\n\r\nWHERE order_gk IN (\r\n\r\nSELECT order_gk FROM public.data_order\r\n\r\nEXCEPT SELECT MIN(order_gk) FROM public.data_order\r\n\r\nGROUP BY order_datetime,origin_longitude, origin_latitude, m_order_eta, order_status_key,is_driver_assigned_key,cancellations_time_in_seconds\r\n\r\n)	data_duplicate_after.png
+\.
+
+
+--
+-- TOC entry 3673 (class 0 OID 58081)
+-- Dependencies: 276
+-- Data for Name: projects_dataprep_namaProject; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."projects_dataprep_namaProject" (id, dataprep_id, proyek_id) FROM stdin;
+1	1	10
+2	2	10
+3	3	6
+4	4	8
+5	5	8
+6	6	9
+7	7	9
+8	8	7
+9	9	7
+10	10	7
+\.
+
+
+--
+-- TOC entry 3667 (class 0 OID 58044)
+-- Dependencies: 270
+-- Data for Name: projects_dataset; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_dataset (id, heading, link, "contentLink") FROM stdin;
+1	In this project, it used 4 csv files, customer data, sales report branch, sales report menu, and sales report customer, each file is data from 2022 to 2023 and must imported to microsoft power BI		
+6	I use the data from Jeff Sackman (user github), please check and download the foloowing link to see the dataset.The files that I used is wta matches 1968- wta matches 2022 (55 files)		
+7		https://github.com/JeffSackmann/tennis_wta	WTA Tennis
+8	The provided compressed file globalterrorismdb_0718dist.tar.bz2 is an extract from the Global Terrorism Database (GTD) - an open-source database including information on terrorist attacks around the world from 1970 through 2017. The GTD includes systematic data on domestic as well as international terrorist incidents that have occurred during this time period and now includes more than 180,000 attacks. The database is maintained by researchers at the National Consortium for the Study of Terrorism and Responses to Terrorism (START), headquartered at the University of Maryland		
+9	Each file is data from 2015 and must be imported to jupyter notebook		
+11	In this project, it used 3 csv files, orders, order_details, and pizzas, that can be accessed in the following link:		
+12		https://drive.google.com/file/d/1Kfsd39u3bQujcwm6qDGvidlH5Lqc8wiJ/view?usp=share_link	orders
+13		https://drive.google.com/file/d/1arl5qCDzmMLRTK9WMQmDCthgWZELrEQD/view?usp=share_link	order_details
+14		https://drive.google.com/file/d/1FCHb0csgSgaal3sMgVCMu4PS-eb5qYBg/view?usp=share_link	pizzas
+15	Data can be access in the following link :		
+16		https://docs.google.com/spreadsheets/d/1ZX1L2hk1vAPlnWxEwaG-EnvGeM0fUqBK1O7EGHwZ3KI/edit?usp=sharing	Get Taxxi
+17	Data can be access in the following link		
+18		https://drive.google.com/file/d/1wiFf1VpFRXXUz9XpHjb--6vFDoNiCVDK/view?usp=sharing	NHTSA
+19	In this project, it used 4 csv files from Air BnB :		
+23		https://docs.google.com/spreadsheets/d/1fWYQWOSzzpTXhccMPfGuBHEa6NKTwUeaORmk5k99zOE/edit?usp=sharing	Neighborhood
+10		Global Terrorism	https://platform.stratascratch.com/data-projects/terrorism-hotspots
+24	In this project, it used 1 files excel supermarket_sales_dataset that contain 4 sheet, transaction_table, payment_table,product_category_table,and branch_table. \r\nPlease click this link to look the dataset:	https://docs.google.com/spreadsheets/d/1EMQA-mbT9WaHsyl9ZqNQD6ba1GnjiueX/edit?usp=sharing&ouid=117100138167330558044&rtpof=true&sd=true	supermarket sales dataset
+2		https://docs.google.com/spreadsheets/d/1ABca_xl3LjWLGQlQ6j1DhMuSluaGtPF_/edit?usp=share_link&ouid=108543528956498823541&rtpof=true&sd=true	Dataset Customer
+20		https://docs.google.com/spreadsheets/d/1ZNN8rY_ej7PuPiBU0oZzdwAxmgo2qCilFFJoxU5GBpE/edit?usp=sharing	Summary
+22		https://docs.google.com/spreadsheets/d/1Vtd3OSjUFTfUxViO86zx-W3LfEPgKQga5JX7N73NUFw/edit?usp=sharing	Room Type
+21		https://docs.google.com/spreadsheets/d/1UoY-DMx3fH1eo54qq3IJvibk6IyB1LENDZFCmCKujvs/edit?usp=sharing	Host
+3		https://docs.google.com/spreadsheets/d/1ScrB2rMwgt5bNdp5i_kjrl_pLfmxaEZm/edit?usp=share_link&ouid=108543528956498823541&rtpof=true&sd=true	Sales Report - Branch Level
+4		https://docs.google.com/spreadsheets/d/1Vsf6qBLGtKnfkcV1sjFafs-zZ_qnvKRa/edit?usp=share_link&ouid=108543528956498823541&rtpof=true&sd=true	Sales Report - Menu Level
+5		https://docs.google.com/spreadsheets/d/1jDWoUy7G7PaJxmJGWC37AeqBTFY7JCkNcPJJteLOmGc/edit?usp=share_link	Sales Report - Customer Level
+25	All the django program can be access in this link		Django Portfolio
+\.
+
+
+--
+-- TOC entry 3669 (class 0 OID 58052)
+-- Dependencies: 272
+-- Data for Name: projects_dataset_namaProject; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."projects_dataset_namaProject" (id, dataset_id, proyek_id) FROM stdin;
+1	1	3
+2	2	3
+3	3	3
+4	4	3
+5	5	3
+6	6	8
+7	7	8
+8	8	10
+9	9	10
+10	10	10
+11	11	9
+12	12	9
+13	13	9
+14	14	9
+15	15	7
+16	16	7
+17	17	6
+18	18	6
+19	19	5
+20	20	5
+21	21	5
+22	22	5
+23	23	5
+24	24	4
+25	25	11
+\.
+
+
+--
+-- TOC entry 3659 (class 0 OID 57973)
+-- Dependencies: 262
+-- Data for Name: projects_insight; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_insight (id, isi) FROM stdin;
+2	Providing special discounts for users who use the service more than 25 times, with the aim of increasing user interest to use the service more often so as to increase turnover.
+3	Special discounts that are only valid at certain hours (for example 7-8 am) are expected to be used during order hours so as to avoid miss opportunities due to time constraints, especially at 11-1 pm.
+4	Making the Sawah Besar branch a role model for other branches in terms of spatial planning, decoration, uniforms, how to serve customers and other aspects.
+5	the cost of stock availability, especially for chicken and beef raw materials as well as complementary raw materials in the form of rice and others to avoid miss-opportunities due to running out of raw materials while there are still orders.
+6	Introducing promos at the right time is expected to increase the number of users. For example, discounts are only valid at 7-9 am, discounts that are only valid on weekends.
+1	Focus on improving delivery services by providing service promises, for example orders can be received 30 minutes after orders are placed within a 5 km radius.
+7	The WTA tennis has a long history since established in 1968 (open era) and has produced hundreds of champions.The tournamen grew up year by year. But based on data, the surface that used in tournament is uneven, dominating by hard surface.
+8	The tennis wta player is dominantly come from USA and russia
+9	Based on data and graph, the graph tends to inceease year by year from 2000-2014 and the reached its peak in 2014, but there are actually a number of countries whose trend tends to decrease, such as Uzbezkistan, Morocco, and Eritrea.
+10	Based on data and graph, the greater the number of terrorism cases, the higher the number of victims, there were even a few months where the number of caucuses tended to be 'small, but caused a very large number of victims, namely September 2001 and March 2004.
+11	The most common attack that used by terrorist is by bombing/explosion, especially in iraq ,pakistan, and afganishtan
+12	In the 2000-2017 period, based on a data map of the number of cases of terrorism spreading throughout the world and most of them were in the country of Ukraine, no area was truly clean from the threat of terrorism.
+13	Based on data, time around lunch and dinner is the time with the most oder of pizzas
+14	More than 75% income is the from pizza with the M and S size
+15	Pizzas with the chicken meat is the most sold pizzas
+16	The business is stabil in 2015 based on income with the avarge of 5% growth or loss
+17	Pizzas in sizes XL and XXL contribute very little to revenue, so to further maximize revenue 1-2 hours before closing, pizzas in XXL or XL can be scaled down to sizes S or L to increase the likelihood of being sold
+18	Make sure the stock of chicken meat is always available because pizza with chicken meat sells very well compared to other flavors/toppings
+19	Based on data, 70% of cancellation of order is canceled by customer and 30% cancellation is by system
+20	The time around 8 am is the time with the most of cancellation order
+21	The average time of cancellation order when driver driver has been assigned is 230 seconds (4 minutes)
+22	The longest of ETA order is about in 8 am , around 600 s (5 minutes)
+23	After looking at the data above, because of the high number of cancellations, besides that the time before order arrival is also very long at 8 am, then you should be able to improve the user experience by updating the application or system to be more user-friendly, updating information about the driver and vehicles in real-time, and introduced an option for users to view estimated wait times and update their location automatically
+24	If possible, you may consider offering promotions or special discounts during peak hours to increase the number of orders and reduce the cancellation rate for taxi orders
+25	Based on data, texas and california is states that have most traffic accident in 2022
+26	The interval time between 12-15 is the most prone to accident
+27	25% percent of traffic accident in usa is because people drunk
+28	The probability of traffic accident is 25% higher in weekend than weekday
+29	Based on data, to reduce the number of traffic accident in 2022, We recommend increasing the number of sheriffs on duty during lunch hours, especially on weekends, as this is an accident-prone time in the Texas and California areas.
+30	Quality of home and lifestyle category must be improved because it have the lowest rating
+31	Total gross in every category is almost equal
+32	Based on chart, the more quantity of product , more gross income so it has positive output
+33	For Category Electronic accessories, although it has most quantity of product but it give least gross income
+34	Quality of home and lifestyle category must be improved because it have the lowest rating.
+35	Total gross in every category is almost equal
+36	Based on chart, the more quantity of product , more gross income so it has positive output
+37	For Category Electronic accessories, although it has most quantity of product but it give least gross income
+\.
+
+
+--
+-- TOC entry 3661 (class 0 OID 57981)
+-- Dependencies: 264
+-- Data for Name: projects_insight_namaProject; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."projects_insight_namaProject" (id, insight_id, proyek_id) FROM stdin;
+1	1	3
+2	2	3
+3	3	3
+4	4	3
+5	5	3
+6	6	3
+7	7	8
+8	8	8
+9	9	10
+10	10	10
+11	11	10
+12	12	10
+13	13	9
+14	14	9
+15	15	9
+16	16	9
+17	17	9
+18	18	9
+19	19	7
+20	20	7
+21	21	9
+22	22	7
+23	23	7
+24	24	7
+25	25	6
+26	26	6
+27	27	6
+28	28	6
+29	29	6
+30	30	5
+31	31	5
+32	32	5
+33	33	5
+34	34	4
+35	35	4
+36	36	4
+37	37	4
+\.
+
+
+--
+-- TOC entry 3645 (class 0 OID 24864)
+-- Dependencies: 248
+-- Data for Name: projects_proyek; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_proyek (id, nama, category, tanggal, client, output, detail, gambar2, gambar3, gambar4, gambar, slug) FROM stdin;
+10	Global Terrorism	Python Dash	2023-06-09	Global Terrorism	https://terrorism.onrender.com/	https://achmadirfana.github.io/terrorism/	media/foodstory1.png			Terror.png	global-terrorism
+4	Supermarket Dashboard	Power BI	2023-03-03	Supermarket	https://app.powerbi.com/view?r=eyJrIjoiZWEzZGFlZTctYjgyMi00M2Y4LTgxMzAtMDhlY2FhNGVkYjk0IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9	https://achmadirfana.github.io/supermarket/	media/supermarket2.png	media/supermarket3.png		supermarket.png	supermarket-dashboard
+8	WTA Tennis	Tableau	2023-04-20	WTA (Women Tennis Association)	https://public.tableau.com/app/profile/achmad.irfan.afandi/viz/Statistics_16819371370300/Dashboard1?publish=yes	https://achmadirfana.github.io/wta/	media/tennis_2.png	media/tennis_3.png	media/tennis_4.png	tennis_.png	wta-tennis
+5	Air BnB Dashboard	Power BI	2023-02-10	Air BnB	https://app.powerbi.com/view?r=eyJrIjoiMjM1NjE5ZmItZGYxNC00MTcxLThlN2YtNjY5YTM2NTQwZTAyIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9	https://achmadirfana.github.io/AirBnB/	media/airbnb2.png	media/airbnb3.png		media/airbnb1.png	air-bnb-dashboard
+9	Pizza Places	Python Dash	2023-05-25	Pizza Place	https://pizza-places.onrender.com/	https://achmadirfana.github.io/pizza-places/	media/pizza_places2.png	media/pizza_places3.png		media/pizza_places.png	pizza-places
+11	Portofolio	Python Django	2023-09-05	-	https://achmadirfana.github.io/portofolio/	https://achmadirfana.github.io/portofolio/	media/portofolio2.png			media/portofolio.png	portofolio
+7	Get TAxxi	SQL	2023-05-05	GetTaxi Israel (Personal Project)	https://achmadirfana.github.io/gettaxxi/	https://achmadirfana.github.io/gettaxxi/	media/sql-gettaxi.png			getaaxxi.png	get-taxxi
+3	Food story	Power BI	2023-04-03	Food story	https://app.powerbi.com/view?r=eyJrIjoiNDFjYWQ4MGMtOTNmNy00OTA1LTk4ZDgtNTMwOTYwM2FmYTc2IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9	https://achmadirfana.github.io/PA2-Food-Story/	media/foodstory2.png	media/foodstory3.png	media/foodstory4.png	media/foodstory_as5vq8W.png	food-story
+6	NHTSA	SQL	2022-12-15	NHTSA	https://app.powerbi.com/view?r=eyJrIjoiMjI5NDY4NGMtNjg2Zi00ZjA1LWI4Y2UtYWJjOTNhZDYxNmU0IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9	https://achmadirfana.github.io/PA1-NHTSA/	media/NHTSA.png			nhtsa2.png	nhtsa
+\.
+
+
+--
+-- TOC entry 3663 (class 0 OID 58016)
+-- Dependencies: 266
+-- Data for Name: projects_purpose; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_purpose (id, isi, heading) FROM stdin;
+2	How has the number of terrorist activities changed over the years? Are there certain regions where this trend is different from the global averages?	
+3	Is the number of incidents and the number of casualties correlated? Can you spot any irregularities or outliers?	
+4	What are the most common methods of attacks? Does it differ in various regions or in time?	
+5	Plot the locations of attacks on a map to visualize their regional spread;	
+1		Imagine you are a security or defense analyst. Analyze the data and draw conclusions on the distribution and nature of terrorist incidents recorded around the world. In your analysis, include maps that visualize the location of different incidents. Your analysis may also provide answers to the following questions:
+6		For helping Food Stories see their data more clearly, analyze their data, and provide insights and recommendations.
+7		Make a power BI dashboard and give insight and recommendation.
+8	Make a dashboard about women tennis, like statistic grand slam, player, head to head etc.	
+9		The main purpose is to provide a number of isnight and recomendation about the data. To do this, first I need to identify the following data:
+12	What's the most ordered pizza? Compare order quantities on each type of pizza with a bar plot	
+11	Are there peak hours? Display in bar plot form.	
+10	How many orders do we get each month? What month have the highest sales? Display in the form of a line chart.	
+13	What is the revenue contribution for each pizza size? Show in the form of a pie chart	
+14	How is the revenue contribution for each type of pizza? Display in the form of bar plots, sorted from the highest contribution.	
+15	What is the revenue in every month ?	
+16		The main purpose is to provide a number of isnight and recomendation about the data. To do this, first I need to identify the following data:
+17	Build up distribution of orders according to reasons for failure: cancellations before and after driver assignment, and reasons for order rejection. Analyse the resulting plot. Which category has the highest number of orders?	
+18	Plot the distribution of failed orders by hours. Is there a trend that certain hours have an abnormally high proportion of one category or another? What hours are the biggest fails? How can this be explained?	
+19	Plot the average time to cancellation with and without driver, by the hour. If there are any outliers in the data, it would be better to remove them. Can we draw any conclusions from this plot?	
+20	Plot the distribution of average ETA by hours. How can this plot be explained?	
+21		The main purpose is to provide a number of recommendations about how to reduce the number of accidents on the highway. To do this, first I need to identify the following data:
+22	Top 10 states where the most accidents occur	
+23	The average number of accidents per day by hour accident	
+24	Percentage of accidents caused by drunk drivers	
+25	Number of accidents by day	
+26		Make a power BI dashboard and give insight and recommendation for Air BnB
+27		Make a portfolio web using framework django with these specification:
+28	Frame work : Django 4	
+29	Database : PostgreSQL	
+30	Web Component : HTML, CSS, javascript, bootstrap 5	
+\.
+
+
+--
+-- TOC entry 3665 (class 0 OID 58024)
+-- Dependencies: 268
+-- Data for Name: projects_purpose_namaProject; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."projects_purpose_namaProject" (id, purpose_id, proyek_id) FROM stdin;
+2	2	10
+3	3	10
+4	4	10
+5	5	10
+6	1	10
+7	6	3
+8	7	4
+9	8	8
+10	9	9
+11	10	9
+12	11	9
+13	12	9
+14	13	9
+15	14	9
+16	15	9
+17	16	7
+18	17	7
+19	18	7
+20	19	7
+21	20	7
+22	21	6
+23	22	6
+24	23	6
+25	24	6
+26	25	6
+27	26	5
+28	27	11
+29	28	11
+30	29	11
+31	30	11
+\.
+
+
+--
+-- TOC entry 3655 (class 0 OID 57959)
+-- Dependencies: 258
+-- Data for Name: projects_recommendation; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_recommendation (id, isi) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3657 (class 0 OID 57967)
+-- Dependencies: 260
+-- Data for Name: projects_recommendation_namaProject; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."projects_recommendation_namaProject" (id, recommendation_id, proyek_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 3651 (class 0 OID 57850)
+-- Dependencies: 254
+-- Data for Name: projects_result; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.projects_result (id, isi, gambar, code) FROM stdin;
+2	Data Manage Relationship	supermarket3.png	
+4	Page Dashboard	supermarket1_j7tqDly.png	
+5	Page Correlation	supermarket1_glb6Mgw.png	
+6	Page Customer Data:	fsp1.png	
+7	Dashboard Customer Data Component:	fsp1_fmf9B0O.png	
+8	Page Sales Report Branch:	fsp2.png	
+9	Dashboard Sales Report Branch Component:	fsp2s.png	
+10	Page Sales Report Menu:	fsp3.png	
+11	Dashboard Sales Report Menu Component:	fsp3s.png	
+12	Page Sales Report Customer:	fsp4.png	
+13	Dashboard Sales Report Customer Component:	fsp4s.png	
+17	Plot the locations of attacks on a map to visualize their regional spread	map.png	data_per_country = data_detail_growth.mean(axis=0).reset_index()\r\npx.choropleth(data_per_country,locations=data_per_country['country_txt'],\r\nlocationmode='country names',color=0,color_continuous_scale=['white','black'],\r\nfacet_row_spacing=0.9999,title='Distribution of Total Terrosim Case 2000-2017')
+14	Terrorist activities changed over the years and regions where this trend is different from the global averages	Terror5.png	total_terrorisme = data.groupby('iyear').count()['eventid'].reset_index()\r\ntotal_terrorisme
+15	The correlation number of incidents and the number of casualties	scatter.png	total_terrorisme['iyear'] = [str(d) for d in total_terrorisme['iyear']]\r\nlot(data=total_terrorisme,x=total_terrorisme['iyear'],y=total_terrorisme['eventid'])\r\nplt.xticks(rotation=90)\r\nplt.tight_layout()\r\nplt.title("Trend of Terrosim 2000-2017")\r\nplt.gca().set_facecolor('black')
+16	The most common methods of attacks?	treemap.png	attack= data.groupby(['country_txt','attacktype1_txt','iyear']).count()['eventid'].reset_index()\r\npx.treemap(data_frame=attack, path=['attacktype1_txt','country_txt','iyear'], values='eventid',title='Most Common Attack')\r\nfig.update_traces(marker=dict(color='cyan'))
+18	Top 10 states where the most accidents occur	dataanalyze1.png	select state_name, count(consecutive_number) as jumlah_kecelakaan from crash\r\ngroup by 1\r\norder by 2 desc\r\nlimit 10
+19	The average number of accidents per day by hour accident	dataanalyze2.png	select to_char(local_time,'HH24') as jam,\r\ncount(consecutive_number)/(select extract(day from (max(local_time)-min(local_time)))+1 from crash)rata2_kecelakaan from crash
+20	Percentage of accidents caused by drunk drivers	dataanalyze3.png	select mabuk.kondisi, count(mabuk.kondisi) as jumlah\r\nfrom\r\n(select consecutive_number,\r\ncase\r\nwhen number_of_drunk_drivers = 0\r\nthen 'tidak mabuk'\r\nelse 'mabuk'\r\nend kondisi\r\nfrom crash) as mabuk\r\ngroup by 1
+21	Percentage of accidents in rural and urban areas	dataanalyze4.png	select land, sum(count) from\r\n(select land_use_name,\r\ncount(consecutive_number),\r\ncase\r\nwhen land_use_name ='Rural'\r\nthen 'Rural'\r\nwhen land_use_name ='Urban'\r\nthen 'Urban'\r\nelse 'Others'\r\nend land\r\nfrom crash\r\ngroup by land_use_name) as x\r\ngroup by land
+22	Number of accidents by day	dataanalyze5.png	select hari, jumlah from\r\n(select to_char(local_time,'D') harii, to_char(local_time,'Day') hari, count(consecutive_number) jumlah\r\nfrom crash\r\ngroup by hari,harii) as x\r\norder by harii
+23	Content Dashboard:	tennis_6.png	
+24	Page Tittle:	tennis_1.png	
+25	Dashboard Head to head:	tennis_2.png	
+26	Dashboard Distribution:	tennis_3.png	
+27	Data Manage Relationship	airbnb3.png	
+28	Page Raw	airbnb1.png	
+29	Page Visualisation	airbnb2.png	
+30	Total Order per Month	no-1.png	order['date']=pd.to_datetime(order['date'])\r\n\r\norder['month']=order['date'].dt.strftime("%Y-%m")\r\n\r\nplt.figure(figsize=(11,4))\r\n\r\nsns.lineplot(data=order.groupby('month')['order_id'].count().reset_index(),x='month',y='order_id')\r\n\r\nplt.title('Total Orders per Month')\r\n\r\nplt.ylabel('Total Transaction')\r\n\r\nplt.xlabel('Month')\r\n\r\nplt.show
+31	Total Order per Hours	no-2.png	order['time']=pd.to_datetime(order['time'])\r\n\r\norder['hours']=order['time'].dt.strftime("%H")\r\n\r\norder_hour= order.groupby('hours')['order_id'].count().reset_index()\r\n\r\norder_hour.to_csv('order_hour.csv',index=False)\r\n\r\nplt.figure(figsize=(8,4))\r\n\r\nsns.barplot(data=order_hour, x='hours', y='order_id')\r\n\r\nplt.title('Orders by Hours')\r\n\r\nplt.xlabel('Hours')\r\n\r\nplt.ylabel('Total Transaction')\r\n\r\nplt.show
+32	Ranking Most of Popular Pizzas	no-3.png	data_merge = pd.merge(order_detail,pizzas,on='pizza_id')\r\n\r\ndata_merge_quantity= data_merge.groupby('pizza_type_id')['quantity'].sum().reset_index()\r\n\r\ndata_merge_quantity.to_csv('data_merge_quantity.csv',index=False)\r\n\r\nplt.figure(figsize=(11,8))\r\n\r\nplt.xticks(rotation='vertical')\r\n\r\nsns.barplot(data=data_merge_quantity.sort_values('quantity', ascending=False),x='pizza_type_id',y='quantity')\r\n\r\nplt.title('Ranking Most of Popular Pizzas')\r\n\r\nplt.xlabel('Pizza Type')\r\n\r\nplt.ylabel('Total Orders')\r\n\r\nplt.show
+33	Revenue contribution by pizza size	no-4.png	data_merge['revenue']=data_merge['quantity']*data_merge['price']\r\n\r\ndata_merge_revenue= data_merge.groupby('size')['revenue'].sum().reset_index()\r\n\r\ndata_merge_revenue.to_csv('data_merge_revenue.csv',index=False)\r\n\r\nsize= data_merge_revenue['size'].tolist()\r\n\r\nrevenue= data_merge_revenue['revenue'].tolist()\r\n\r\nplt.figure(figsize=(11,8))\r\n\r\nplt.pie(revenue, labels=size,autopct='%1.1f%%')\r\n\r\nplt.title('Revenue Contribution by Pizza Size')\r\n\r\nplt.show
+35	Revenue Contribution by Month	no-6.png	data_merge_order_merge= pd.merge(order,data_merge, on='order_id')\r\n\r\ndata_merge_revenue_month = data_merge_order_merge.groupby('month')['revenue'].sum().reset_index()\r\n\r\ndata_merge_revenue_month.to_csv('data_merge_revenue_month.csv',index=False)\r\n\r\nplt.figure(figsize=(11,8))\r\n\r\nplt.xticks(rotation='vertical')\r\n\r\nsns.barplot(data=data_merge_revenue_month,x='month',y='revenue')\r\n\r\nplt.title('Revenue Contribution by Month')\r\n\r\nplt.xlabel('Month',)\r\n\r\nplt.ylabel('Revenue')\r\n\r\nplt.show
+34	Revenue contribution by pizza type	no-6_IvzITFH.png	data_merge_size= data_merge.groupby('pizza_type_id')['revenue'].sum().reset_index()\r\n\r\ndata_merge_size.to_csv('data_merge_size.csv',index=False)\r\n\r\nplt.figure(figsize=(11,8))
+36	Distribution of orders according to reasons for failure	order_status_key.png	select order_status_key, count(order_gk) total from public.data_order\r\n\r\ngroup by order_status_key\r\n\r\norder by total desc
+37	Distribution of failed orders by hours	hour.png	select extract(hour from order_datetime) "Hour", count(order_gk) total from public.data_order\r\n\r\ngroup by "Hour"\r\n\r\norder by total desc
+38	Average time to cancellation with and without driver	avgcancel.png	select is_driver_assigned_key, avg(cancellations_time_in_seconds)\r\n\r\nfrom public.data_order\r\n\r\ngroup by is_driver_assigned_key
+39	Distribution of average ETA by hours	average_order_eta.png	select extract(hour from order_datetime) "Hour", avg(m_order_eta) average_eta from public.data_order\r\n\r\ngroup by "Hour"\r\n\r\norder by average_eta desc
+40	Home	cover.png	
+41	About	cover_gPLZTlA.png	
+42	Education	cover_qW4q6ju.png	
+43	Skill	cover_LQeCMrG.png	
+44	Project Portfolio	cover_5bUZo4H.png	
+45	Services	cover_FzvodAl.png	
+46	Contact	cover_a44AAwE.png	
+\.
+
+
+--
+-- TOC entry 3653 (class 0 OID 57938)
+-- Dependencies: 256
+-- Data for Name: projects_result_namaProject; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."projects_result_namaProject" (id, result_id, proyek_id) FROM stdin;
+1	2	4
+3	4	4
+4	5	4
+5	6	3
+6	7	3
+7	8	3
+8	9	3
+9	10	3
+10	11	3
+11	12	3
+12	13	3
+13	14	10
+14	15	10
+15	16	10
+16	17	10
+17	18	6
+18	19	6
+19	20	6
+20	21	6
+21	22	6
+22	23	8
+23	24	8
+24	25	8
+25	26	8
+26	27	5
+27	28	5
+28	29	5
+29	30	9
+30	31	9
+31	32	9
+32	33	9
+33	34	9
+34	35	9
+35	36	7
+36	37	7
+37	38	7
+38	39	7
+39	40	11
+40	41	11
+41	42	11
+42	43	11
+43	44	11
+44	45	11
+45	46	11
+\.
+
+
+--
+-- TOC entry 3643 (class 0 OID 24848)
+-- Dependencies: 246
+-- Data for Name: services_offer; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.services_offer (id, item, "desc", icon) FROM stdin;
+5	Bussiness insight and recomend	Inform accurate informations based on data from general issue until spesific issue and recomendation	bx bx-loader
+1	Data Cleansing	Perform data definitions, perform cleaning of invalid data, and delete duplicate data using Ms. Excel, Spreadsheet, or SQL approach.	bx bxs-hourglass-top
+6	Web Building	Make website with framework from django or simply web using dash	bx bxl-django
+3	Data Visualization	Visualize based on data using excel, pivot table, or power BI	bx bx-bar-chart-square
+2	Data Manipulation	For transforming or modifying data to make it more suitable for analysis	bx bx-package
+7	Dashboard by Power BI/Tableau	Performing a very intellegent bussiness report	bx bx-slideshow
+\.
+
+
+--
+-- TOC entry 3641 (class 0 OID 24828)
+-- Dependencies: 244
+-- Data for Name: skill_skill; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.skill_skill (id, skill_name, ability) FROM stdin;
+2	Google Spreadsheet	Advance
+3	Microsoft Excel	Advenced
+1	PostgreSQL	Advance
+4	MySQL	Advanced
+5	Microsoft Power BI	Intermediate
+6	Tableau	Basic
+7	Python	Intermediate
+8	Python Django	Basic
+10	Team Work	Advance
+11	Project Management	Basic
+12	Leadership	OK
+9	Python Dash	Intermediate
+\.
+
+
+--
+-- TOC entry 3679 (class 0 OID 0)
+-- Dependencies: 237
+-- Name: about_summaries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.about_summaries_id_seq', 1, true);
+
+
+--
+-- TOC entry 3680 (class 0 OID 0)
+-- Dependencies: 220
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
+
+
+--
+-- TOC entry 3681 (class 0 OID 0)
+-- Dependencies: 222
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 3682 (class 0 OID 0)
+-- Dependencies: 218
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 136, true);
+
+
+--
+-- TOC entry 3683 (class 0 OID 0)
+-- Dependencies: 226
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
+
+
+--
+-- TOC entry 3684 (class 0 OID 0)
+-- Dependencies: 224
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_user_id_seq', 2, true);
+
+
+--
+-- TOC entry 3685 (class 0 OID 0)
+-- Dependencies: 228
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- TOC entry 3686 (class 0 OID 0)
+-- Dependencies: 249
+-- Name: contact_contactmodel_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.contact_contactmodel_id_seq', 11, true);
+
+
+--
+-- TOC entry 3687 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 447, true);
+
+
+--
+-- TOC entry 3688 (class 0 OID 0)
+-- Dependencies: 216
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 34, true);
+
+
+--
+-- TOC entry 3689 (class 0 OID 0)
+-- Dependencies: 214
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 99, true);
+
+
+--
+-- TOC entry 3690 (class 0 OID 0)
+-- Dependencies: 233
+-- Name: education_certification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.education_certification_id_seq', 3, true);
+
+
+--
+-- TOC entry 3691 (class 0 OID 0)
+-- Dependencies: 239
+-- Name: education_projectexp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.education_projectexp_id_seq', 2, true);
+
+
+--
+-- TOC entry 3692 (class 0 OID 0)
+-- Dependencies: 235
+-- Name: education_school_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.education_school_id_seq', 3, true);
+
+
+--
+-- TOC entry 3693 (class 0 OID 0)
+-- Dependencies: 241
+-- Name: education_workexp_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.education_workexp_id_seq', 2, true);
+
+
+--
+-- TOC entry 3694 (class 0 OID 0)
+-- Dependencies: 251
+-- Name: projects_backgroundproject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_backgroundproject_id_seq', 10, true);
+
+
+--
+-- TOC entry 3695 (class 0 OID 0)
+-- Dependencies: 273
+-- Name: projects_dataprep_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_dataprep_id_seq', 10, true);
+
+
+--
+-- TOC entry 3696 (class 0 OID 0)
+-- Dependencies: 275
+-- Name: projects_dataprep_namaProject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."projects_dataprep_namaProject_id_seq"', 10, true);
+
+
+--
+-- TOC entry 3697 (class 0 OID 0)
+-- Dependencies: 269
+-- Name: projects_dataset_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_dataset_id_seq', 25, true);
+
+
+--
+-- TOC entry 3698 (class 0 OID 0)
+-- Dependencies: 271
+-- Name: projects_dataset_namaProject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."projects_dataset_namaProject_id_seq"', 25, true);
+
+
+--
+-- TOC entry 3699 (class 0 OID 0)
+-- Dependencies: 261
+-- Name: projects_insight_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_insight_id_seq', 37, true);
+
+
+--
+-- TOC entry 3700 (class 0 OID 0)
+-- Dependencies: 263
+-- Name: projects_insight_namaProject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."projects_insight_namaProject_id_seq"', 37, true);
+
+
+--
+-- TOC entry 3701 (class 0 OID 0)
+-- Dependencies: 247
+-- Name: projects_proyek_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_proyek_id_seq', 13, true);
+
+
+--
+-- TOC entry 3702 (class 0 OID 0)
+-- Dependencies: 265
+-- Name: projects_purpose_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_purpose_id_seq', 30, true);
+
+
+--
+-- TOC entry 3703 (class 0 OID 0)
+-- Dependencies: 267
+-- Name: projects_purpose_namaProject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."projects_purpose_namaProject_id_seq"', 31, true);
+
+
+--
+-- TOC entry 3704 (class 0 OID 0)
+-- Dependencies: 257
+-- Name: projects_recommendation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_recommendation_id_seq', 1, false);
+
+
+--
+-- TOC entry 3705 (class 0 OID 0)
+-- Dependencies: 259
+-- Name: projects_recommendation_namaProject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."projects_recommendation_namaProject_id_seq"', 1, false);
+
+
+--
+-- TOC entry 3706 (class 0 OID 0)
+-- Dependencies: 253
+-- Name: projects_result_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.projects_result_id_seq', 46, true);
+
+
+--
+-- TOC entry 3707 (class 0 OID 0)
+-- Dependencies: 255
+-- Name: projects_result_namaProject_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."projects_result_namaProject_id_seq"', 45, true);
+
+
+--
+-- TOC entry 3708 (class 0 OID 0)
+-- Dependencies: 245
+-- Name: services_offer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.services_offer_id_seq', 7, true);
+
+
+--
+-- TOC entry 3709 (class 0 OID 0)
+-- Dependencies: 243
+-- Name: skill_skill_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.skill_skill_id_seq', 12, true);
+
+
+-- Completed on 2023-09-12 23:07:21
+
+--
+-- PostgreSQL database dump complete
+--
+

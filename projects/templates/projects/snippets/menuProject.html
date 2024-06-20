@@ -1,0 +1,14 @@
+<div class="projects-menu">
+  <div class="nav-menu">
+    <ul class="nav nav-underline">
+      <li class="nav-item"></li>
+      <a class="nav-link active" aria-current="page" href="{% url 'app_projects:projects_category' 'ALL' %}" data-category="ALL">ALL</a>
+       </li>
+      {% for items in item %}
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{% url 'app_projects:projects_category' items %}" data-category="{{ items }}">{{ items|upper }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

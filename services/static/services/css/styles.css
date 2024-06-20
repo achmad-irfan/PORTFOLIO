@@ -1,0 +1,90 @@
+.headerservice {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.serviceItemCol {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.serviceItem {
+  background-color: rgb(204, 202, 221);
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-areas: "icon service" " icon jobdesc";
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 10px 10px 10px white;
+}
+
+.serviceItem i {
+  grid-area: icon;
+  color: blue;
+  font-size: 5em;
+  place-self: center;
+}
+h4.service {
+  color: blue;
+  font-size: 1.5em;
+  grid-area: service;
+}
+h5 {
+  color: black;
+  grid-area: jobdesc;
+  font-size: 1.5vm;
+}
+
+@media screen and (max-width: 996px) {
+  .headerservice {
+    font-size: 1.5em;
+  }
+
+  .serviceItemCol {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .serviceItem {
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: grid;
+    box-shadow: 5px 5px 5px white;
+    grid-template-columns: 1fr;
+  }
+
+  .serviceItem i {
+    grid-area: icon;
+    color: blue;
+    font-size: 2.5em;
+    place-self: center;
+    justify-self: start;
+  }
+
+  h4.service {
+    font-size: 1.2em;
+    grid-area: service;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .headerservice {
+    font-size: 1.2em;
+  }
+  .serviceItem {
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-areas: "icon service" " icon jobdesc";
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 5px 5px 5px white;
+  }
+  .serviceItemCol {
+    padding: 5px 0;
+    gap: 10px;
+  }
+}

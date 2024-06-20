@@ -1,0 +1,86 @@
+<!-- Extend base-->
+{% extends 'base.html' %} {% load static %}
+<!-- Load Static-->
+{% block css_app%}
+
+<!-- CSS Main-->
+{% include 'snippets/main_css.html' %}
+<!-- CSS App General-->
+{% include 'about/snippets/main_app_css.html' %}
+<!-- CSS App Projects-->
+<link rel="stylesheet" type="text/css" href="{% static "education\css\styles.css" %}" />
+
+<!-- Akhir Block -->
+{% endblock%}
+
+<!--Isi Content -->
+{% block contain_isi %}
+<div class="app-title">{{title}}</div>
+<hr />
+<div class="edu-content">
+    <div class="content edu">
+      <h4 class="head">Education</h4>
+      <ul>
+        {% for edu in school %}
+        <div class="content-head">
+        <li>{{edu.college}}</li>
+        <li class="time">{{edu.year}}</li>
+        <li>{{edu.major}}</li>
+        </div>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="content certification">
+      <h4 class="head">Certifications</h4>
+      <ul>
+        {% for cert in certificate %}
+        <div class="content-head">
+        <li>{{cert.major}}</li>
+        <li class="time">{{cert.year}}</li>
+        <li>{{cert.certifier}}</li>
+         </div>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="content workExp">
+      <h4 class="head">Work Experience</h4>
+      <ul>
+        {% for work in workexp %}
+        <div class="content-head">
+        <li>{{work.title}}</li>
+        <li>{{work.company}}</li>
+         <li class="time">{{work.year}}</li>
+        <li>{{work.city}}</li>
+        <h5 class="headingEducation">Jobdesc:</h5>
+         <ul class="jobdescs">
+          <li>{{work.jobdesk1}}</li>
+          <li>{{work.jobdesk2}}</li>
+          <li>{{work.jobdesk3}}</li>
+        </ul>
+        <p>{{work.jobdesk4}}</p>
+        </div>
+       {% endfor %}
+      </ul>
+  </div>
+ 
+    <div class="content projectExp">
+      <h4 class="head">Project Experience</h4>
+      <ul>
+        {% for project in projectexp %}
+        <div class="content-head">
+        <li>{{project.title}}</li>
+        <li class="time">{{project.year}}</li>
+        <li class="time">{{project.city}}</li>
+        <h5 class="headingEducation">Background:</h5>
+        <p>{{project.background}}</p>
+        <h5 class="headingEducation">Jobdesc:</h5>
+        <ul class="jobdescs">
+          <li>{{project.jobdesk1}}</li>
+          <li>{{project.jobdesk2}}</li>
+          <p>{{project.jobdesk4}}</p>
+          </div>
+      {% endfor %}
+      </ul>
+    </div>
+</div>
+{% endblock %}

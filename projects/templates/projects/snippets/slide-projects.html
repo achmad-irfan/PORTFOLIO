@@ -1,0 +1,35 @@
+<div class="contain-isi-projects">
+  <div class="text-start app-title">{{title}}</div>
+  <hr />
+  <div class="backButton">
+    <a href="{% url 'app_projects:projects' %}"><i class="bx bx-home-circle"></i></a>
+  </div>
+  <div class="row contain-project">
+    <div class="col-7 slide-project">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ proyek.gambar.url }}" class="d-block w-100" alt="First" />
+          </div>
+          <div class="carousel-item">
+            <img src="{{ proyek.gambar2.url }}" class="d-block w-100" alt="Second" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-4 detail-project">{% include 'projects/snippets/contain-projects.html' %}</div>
+  </div>
+</div>

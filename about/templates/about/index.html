@@ -1,0 +1,27 @@
+<!-- Extend base-->
+{% extends 'base.html' %}
+
+<!-- Load Static-->
+{% load static %}
+<!-- Link CSs-->
+
+{% block css_app%}
+<!-- CSS Main-->
+{% include 'snippets/main_css.html' %}
+<!-- CSS App-->
+{% include 'about/snippets/main_app_css.html' %}
+<!-- Akhir Block -->
+{% endblock%}
+
+<!--Isi Content -->
+{% block contain_isi %}
+<div class="app-title">{{title}}</div>
+<hr />
+<div class="isi">
+  <div class="aboutContent">
+    {% for item in summary %}
+    <p>{{item.isi}}</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

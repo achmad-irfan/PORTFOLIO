@@ -1,0 +1,77 @@
+{% load static %}
+<nav class="sidebar">
+  <header class="logo">
+    <span class="image"> <img src="{% static 'img/logo.png' %}" alt="logoxx" /> </span>
+    <span class="name"> Achmad Irfan Afandi </span>
+  </header>
+  <div class="icon">
+    <div class="icon-social">
+      <a href="https://www.linkedin.com/in/achmad-irfan-afandi-9661131a6/">
+        <i class="bi bi-linkedin bi-lg custom-icon"> </i>
+      </a>
+      <a href="https://github.com/achmad-irfan">
+        <i class="bi bi-github bi-lg custom-icon"> </i>
+      </a>
+      <a href="https://www.facebook.com/achmad.irfan.754">
+        <i class="bi bi-facebook bi-lg custom-icon"> </i>
+      </a>
+      <a href="https://www.facebook.com/achmad.irfan.754">
+        <i class="bi bi-twitter bi-lg custom-icon"> </i>
+      </a>
+      <a href="https://www.facebook.com/achmad.irfan.754">
+        <i class="bi bi-instagram bi-lg custom-icon"> </i>
+      </a>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="menu-link">
+      <a href="/">
+        <i class="bx bx-home"> </i>
+        <div class="contentMenu">HOME</div>
+      </a>
+    </div>
+
+    <div class="menu-link">
+      <a href="{% url 'app_about:about' %}">
+        <i class="bi bi-file-earmark-person"> </i>
+        <div class="contentMenu">ABOUT</div>
+      </a>
+    </div>
+
+    <div class="menu-link">
+      <a href="{% url 'app_education:education' %}">
+        <i class="bx bxs-graduation"> </i>
+        <div class="contentMenu">EDUCATION</div>
+      </a>
+    </div>
+
+    <div class="menu-link">
+      <a href="{% url 'app_skill:skill' %}">
+        <i class="bx bxs-wrench"> </i>
+        <div class="contentMenu">SKILL</div>
+      </a>
+    </div>
+
+    <div class="menu-link">
+      <a href="{% url 'app_projects:projects' %}">
+        <i class="bx bx-building"> </i>
+        <div class="contentMenu">PROJECTS</div>
+      </a>
+    </div>
+
+    <div class="menu-link">
+      <a href="{% url 'app_services:services' %}">
+        <i class="bx bx-support"> </i>
+        <div class="contentMenu">SERVICES</div>
+      </a>
+    </div>
+
+    <div class="menu-link">
+      <a href="{% url 'app_contact:contact' %}">
+        <i class="bx bxs-contact"> </i>
+        <div class="contentMenu">CONTACT</div>
+      </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+<!-- Extend base-->
+{% extends 'base.html' %}
+
+<!-- Load Static-->
+{% load static %}
+
+<!-- Link CSs-->
+{% block css_app%}
+<!-- CSS Main-->
+{% include 'snippets/main_css.html' %}
+<!-- CSS App General-->
+{% include 'about/snippets/main_app_css.html' %}
+<!-- CSS App Education-->
+<link rel="stylesheet" type="text/css" href="{% static "skill\css\styles.css" %}" />
+<!-- Akhir Block -->
+{% endblock%}
+
+<!--Isi Content -->
+{% block contain_isi %}
+<div class="text-start app-title">{{title}}</div>
+<hr />
+<div class="isi">
+  <ul class="skills">
+    {% for skills in skill %}
+    <li><img src="{% static 'img/'|add:skills.skill_name|lower|add:'.png' %}" alt="icon" /> {{skills.skill_name}}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

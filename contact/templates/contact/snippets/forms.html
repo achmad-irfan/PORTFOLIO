@@ -1,0 +1,7 @@
+<form method="POST">
+  {% csrf_token %} {% for form in contacts %}
+  <div class="form-group">{{form.label}} {{form}}</div>
+  {% endfor %}
+
+  <button class="btn btn-dark" type="Submit">Send</button>
+</form>

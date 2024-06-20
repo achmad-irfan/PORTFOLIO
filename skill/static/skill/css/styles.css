@@ -1,0 +1,21 @@
+@media (max-width: 992px) {
+}
+
+.skills {
+  list-style: none;
+  column-count: 2;
+  background-color: rgb(204, 202, 221);
+  border-radius: 2vw;
+  column-gap: 6vw;
+  padding: 2vw;
+}
+
+li {
+  font-size: 1.8vw;
+  margin-bottom: 1vw;
+}
+
+.skills img {
+  width: 4.5vw;
+  height: 4.5vw;
+}

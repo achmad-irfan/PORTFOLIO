@@ -1,0 +1,123 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  padding: 50px;
+  gap: 30px;
+  color: black;
+}
+
+.biodata-contact,
+.form-contact {
+  background-color: rgb(204, 202, 221);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 10px 10px 10px white;
+}
+
+.biodata-contact {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contactItem {
+  display: grid;
+  grid-template-areas:
+    "icon item"
+    "icon content";
+  grid-template-columns: 1fr 4fr;
+  justify-items: start;
+  align-items: center;
+}
+
+.contactItem i {
+  grid-area: icon;
+  font-size: 2.5em;
+  color: blue;
+}
+
+.contactItem h3 {
+  place-self: center;
+  grid-area: item;
+  font-size: 1.7em;
+  color: rgb(98, 0, 255);
+}
+
+.contactItem h4 {
+  grid-area: content;
+  place-self: center;
+  font-size: 1.4em;
+  color: black;
+}
+.form-contact {
+  width: 100%;
+}
+.form-group {
+  color: black;
+  font-size: 2em;
+  width: 100%;
+}
+
+.btn {
+  margin-top: 20px;
+  color: black;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 996px) {
+  .contact {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .contactItem {
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+      "icon"
+      "content";
+    grid-template-rows: 1fr 1r;
+    align-items: space-around;
+  }
+  .contactItem i {
+    font-size: 2em;
+    color: blue;
+  }
+
+  .biodata-contact,
+  .form-contact {
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 5px white;
+  }
+
+  .contactItem h3 {
+    display: none;
+  }
+
+  .contactItem h4 {
+    font-size: 1em;
+  }
+
+  .form-group {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .btn {
+    margin-top: 10px;
+    color: black;
+    padding: 10px;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 996px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .contactItem h4 {
+    font-size: 0.8em;
+  }
+}

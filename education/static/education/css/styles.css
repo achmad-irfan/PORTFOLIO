@@ -1,0 +1,95 @@
+.edu-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: end;
+  margin: 20px;
+  gap: 30px;
+}
+
+.content {
+  background-color: rgb(204, 202, 221);
+  border-radius: 10px;
+  padding: 10px 30px;
+  box-shadow: 10px 10px 10px white;
+}
+
+.content h4 {
+  color: blue;
+  font-size: 2em;
+}
+
+.content ul li {
+  color: black;
+  font-size: 1.3em;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.content ul li:nth-child(1) {
+  list-style: inherit;
+  font-size: 1.5em;
+}
+
+.content ul li.time {
+  background-color: darkslategray;
+  font-size: 1.2em;
+  display: inline-block;
+  padding: 10px;
+}
+
+.headingEducation {
+  color: black;
+  font-size: 1.2em;
+}
+
+.workExp ul ul.jobdescs li,
+.projectExp ul ul.jobdescs li {
+  margin-left: 30px;
+  list-style: square;
+  font-size: 1.1em;
+}
+
+.workExp ul p,
+.projectExp ul p,
+.projectExp ul ul p {
+  color: black;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 996px) {
+  .content h4 {
+    font-size: 1em;
+  }
+
+  .content ul li {
+    font-size: 0.85em;
+  }
+
+  .content ul li:nth-child(1) {
+    font-size: 0.9em;
+  }
+
+  .headingEducation {
+    font-size: 0.8em;
+  }
+
+  .content ul li.time {
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 5px;
+  }
+  .headingEducation {
+    color: black;
+    font-size: 0.8em;
+  }
+  .workExp ul p,
+  .projectExp ul p,
+  .projectExp ul ul p {
+    font-size: 0.9em;
+  }
+
+  .workExp ul ul.jobdescs li,
+  .projectExp ul ul.jobdescs li {
+    font-size: 0.8em;
+  }
+}

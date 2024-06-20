@@ -1,0 +1,28 @@
+{% load static %}
+<div class="projects-thumbnail">
+  <!--- Load images-->
+  {% for items in object_list %}
+  <!--- Load images-->
+  <a href="{% url 'app_projects:detail_ProjectView' items.slug %}">
+    <img src="{{ items.gambar.url }}" />
+  </a>
+  {% endfor %}
+</div>
+<div class="paginator">
+  <div class="leftPaginator">
+    {% if is_paginated %} {% if page_obj.has_previous %}
+    <a href="{% url 'app_projects:projects_page' page_obj.previous_page_number %}" title=""> &laquo</a>
+    {% else %} <span>&laquo</span>
+    {% endif %} {% endif %}
+  </div>
+  <div class="Page">
+    {% for item in paginator.page_range %}
+    <a href="{% url 'app_projects:projects_page' item %}" title="">{{item}}</a>
+    {% endfor %}
+  </div>
+  <div class="RightPaginator">
+    {% if is_paginated %} {% if page_obj.has_next %}
+    <a href="{% url 'app_projects:projects_page' page_obj.next_page_number %}" title=""> &raquo</a>
+    {% else %} <span>&raquo</span> {% endif %} {% endif %}
+  </div>
+</div>

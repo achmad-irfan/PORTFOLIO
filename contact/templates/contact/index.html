@@ -1,0 +1,39 @@
+<!-- Extend base-->
+{% extends 'base.html' %} {% load static %}
+<!-- Load Static-->
+{% block css_app %}
+<!-- CSS Main-->
+{% include 'snippets/main_css.html' %}
+<!-- CSS App General-->
+{% include 'about/snippets/main_app_css.html' %}
+<!-- CSS App Projects-->
+<link rel="stylesheet" type="text/css" href="{% static "contact\css\styles.css" %}" />
+<!-- Akhir Block -->
+{% endblock %}
+
+<!-- Contain Menu Contact -->
+{% block contain_isi %}
+
+<div class="app-title">{{title}}</div>
+<hr />
+<div class="contact">
+  <div class="biodata-contact">
+    <div class="contactItem">
+      <i class="bx bx-current-location"></i>
+      <h3>Location :</h3>
+      <h4>{{location}}</h4>
+    </div>
+    <div class="contactItem">
+      <i class="bx bxs-envelope"></i>
+      <h3>Email :</h3>
+      <h4>{{email}}</h4>
+    </div>
+    <div class="contactItem">
+      <i class="bx bxs-phone-call"></i>
+      <h3>Call :</h3>
+      <h4>{{call}}</h4>
+    </div>
+  </div>
+  <div class="form-contact">{% include 'contact/snippets/forms.html' %}</div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %}
+
+<!-- Link CSs-->
+{% block css_app%}
+<!-- CSS Main-->
+{% include 'snippets/main_css.html' %}
+<!-- CSS App General-->
+{% include 'about/snippets/main_app_css.html' %}
+<!-- CSS App Education-->
+<link rel="stylesheet" type="text/css" href="{% static "services\css\styles.css" %}" />
+<!-- Akhir Block -->
+{% endblock%}
+
+<!--Isi Content -->
+{% block contain_isi %}
+
+<div class="text-start app-title">{{title}}</div>
+<hr />
+<div class="isi">
+  <h4 class="headerservice">What can I offer you:</h4>
+  <div class="serviceItemCol">
+    {% for items in offers %}
+    <div class="serviceItem">
+      <i class="{{items.icon}}"></i>
+      <h4 class="service">{{items.item}}</h4>
+      <h5>{{items.desc}}</h5>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

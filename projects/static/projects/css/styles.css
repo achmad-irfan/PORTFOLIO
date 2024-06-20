@@ -1,0 +1,134 @@
+.nav-menu {
+  display: flex;
+  justify-content: center;
+}
+.nav-link.active {
+  background-color: rgb(204, 202, 221);
+  border-radius: 1vw;
+  margin: 0.5vw;
+  border: 0.1vw solid black;
+}
+.projects-thumbnail {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.contain-isi {
+  height: 700%;
+}
+.projects-thumbnail img {
+  border: 2px solid rgb(1, 1, 1);
+  width: 300px;
+  height: 190px;
+  margin: 10px 5px;
+}
+
+.slide-project,
+.detail-project {
+  margin-left: 20px;
+  border: 2px solid black;
+}
+.contain-project .carousel-item {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-left: 30px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+}
+
+.leftPaginator,
+.Page,
+.RightPaginator {
+  margin: 1vw;
+  font-size: 2vw;
+  text-decoration: none;
+}
+.contain-isi-projects {
+  position: relative;
+}
+
+.backButton .bx {
+  font-size: 3vw;
+  color: blue;
+  margin-left: 1vw;
+}
+
+.report {
+  margin-left: 2vw;
+}
+
+.report ol li {
+  color: blue;
+  font-weight: bold;
+  font-size: 1.6vw;
+}
+
+.report ol ul img {
+  width: 60vw;
+  height: 25vw;
+  margin-bottom: 1.5vw;
+}
+
+#insight_items li {
+  color: black;
+  font-size: 1.1vw;
+  margin-bottom: 0.3vw;
+  font-weight: lighter;
+}
+
+.report i {
+  float: right;
+  font-size: 3vw;
+  margin-right: 2vw;
+  color: rgb(20, 6, 60);
+}
+
+#icon-report {
+  display: inline-block;
+  width: 100%;
+}
+
+#linkProject a {
+  color: black;
+  font-weight: lighter;
+  text-decoration: none;
+  font-size: 1.2vw;
+}
+
+.code p {
+  border: 5px solid black;
+  background-color: azure;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#result li {
+  color: black;
+  font-size: 1.3vw;
+}
+
+#codeResult {
+  border: 0.2vw solid black;
+  margin-left: 1vw;
+  padding-left: 1vw;
+}
+
+#purpose li {
+  color: black;
+  font-weight: lighter;
+  font-size: 1.2vw;
+}
