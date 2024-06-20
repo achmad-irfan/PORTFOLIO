@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'achmadi2_PORTFOLIO',
         'USER': 'achmadi2_irfan_afandi',
-        'PASSWORD': 'NEY&wdK#ozP(',
+        'PASSWORD': 'n+VToE=i{3)e',
         'HOST': 'localhost',
         'PORT': '3306',
     }
