@@ -1,21 +1,47 @@
-@media (max-width: 992px) {
+.skills {
+  padding: 30px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 60%;
 }
 
-.skills {
-  list-style: none;
-  column-count: 2;
-  background-color: rgb(204, 202, 221);
-  border-radius: 2vw;
-  column-gap: 6vw;
-  padding: 2vw;
+img {
+  width: 40px;
+  height: 40px;
 }
 
 li {
-  font-size: 1.8vw;
-  margin-bottom: 1vw;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.1em;
+  background-color: rgb(218, 226, 234);
+  list-style: none;
+  color: blue;
+  padding: 5px 50px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px white;
+  gap: 10px;
+  align-items: center;
 }
 
-.skills img {
-  width: 4.5vw;
-  height: 4.5vw;
+@media screen and (max-width: 996px) {
+  .skills {
+    padding: 20px 0;
+    gap: 13px;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+  }
+
+  li {
+    font-size: 1em;
+    color: black;
+    padding: 0 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(255, 255, 255);
+  }
 }
