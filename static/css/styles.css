@@ -39,7 +39,7 @@ nav.sidebar {
 }
 
 span.name {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 span.image img {
   height: 70px;
@@ -56,7 +56,7 @@ span.image img {
 }
 
 .icon-social i {
-  font-size: 35px;
+  font-size: 34px;
   box-shadow: 5px 5px 5px white;
 }
 
