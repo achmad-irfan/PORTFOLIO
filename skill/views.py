@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import ListSkill
+from .models import listskill
 # Create your views here.
 
 
 def index(request):
-    skillss = ListSkill.objects.all()
+    skills = listskill.objects.all()
     context = {
         'title': 'Skills',
-        'skills': skillss}
+        'skillsss': skills}
 
     return render(request, 'skill/index.html', context)

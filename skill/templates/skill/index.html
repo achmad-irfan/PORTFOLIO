@@ -21,7 +21,7 @@
 <hr />
 <div class="isi">
   <ul class="skills">
-    {% for asq in skills %}
+    {% for asq in skillsss %}
     <li><img src="{% static 'img/'|add:asq.name_skill|lower|add:'.png' %}" alt="icon" /> {{asq.name_skill}}</li>
     {% endfor %}
   </ul>
