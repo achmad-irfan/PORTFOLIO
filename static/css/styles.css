@@ -34,12 +34,12 @@ nav.sidebar {
   padding-top: 20px;
   padding-bottom: 20px;
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 2.2fr;
   place-items: center;
 }
 
 span.name {
-  font-size: 1.45em;
+  font-size: 1.3em;
 }
 span.image img {
   height: 70px;
@@ -56,9 +56,8 @@ span.image img {
 }
 
 .icon-social i {
-  font-size: 40px;
+  font-size: 35px;
   box-shadow: 5px 5px 5px white;
-  padding: 5px;
 }
 
 /* End of Social Media Icon */
