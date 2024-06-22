@@ -20,10 +20,9 @@
 <div class="text-start app-title">{{title}}</div>
 <hr />
 <div class="isi">
-
- <ul class="skills">
+  <ul class="skills">
     {% for asq in skillsss %}
-    <li><img src="{{ asq.image.url }}" alt="icon" /> {{asq.name_skill}}</li>
+    <li><img src="{{asq.image.url}}" alt="icon" /> {{asq.name_skill}}</li>
     {% endfor %}
   </ul>
 </div>
