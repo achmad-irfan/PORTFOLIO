@@ -3,6 +3,9 @@
     <ul class="nav nav-underline">
       {% for items in item %}
       <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{% url 'app_projects:projects_category' 'ALL' %}" data-category="ALL">ALL</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="{% url 'app_projects:projects_category' items %}" data-category="{{ items }}">{{ items|upper }}</a>
       </li>
       {% endfor %}
