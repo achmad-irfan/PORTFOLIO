@@ -23,7 +23,7 @@
 
  <ul class="skills">
     {% for asq in skillsss %}
-    <li><img src="{% static 'skill/img/'|add:asq.name_skill|lower %}.png" alt="icon" /> {{asq.name_skill}}</li>
+    <li><img src="{{ asq.image.url }}" alt="icon" /> {{asq.name_skill}}</li>
     {% endfor %}
   </ul>
 </div>
