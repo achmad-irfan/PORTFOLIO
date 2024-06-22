@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
-  gap: 2vw;
+  gap: 1.5vw;
 }
 
 .nav-item {
@@ -19,9 +19,9 @@
   padding: 8px;
   width: 120px;
   display: flex;
-  justify-content: center; /* Menengahkan secara horizontal */
-  align-items: center; /* Menengahkan secara vertikal */
-  text-align: center; /* Menengahkan secara horizontal jika perlu */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 /* .nav-link.active {
   background-color: rgb(35, 32, 32);
