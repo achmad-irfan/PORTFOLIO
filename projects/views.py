@@ -22,7 +22,7 @@ class indexView(ListView):
     extra_context = {
 
         'title': 'Projects',
-        'item': ['SQL', 'Power BI', 'Tableau', 'Python Dash', 'Python Django']}
+        'item': ['SQL', 'Power BI', 'Tableau', 'Dash', 'Django']}
 
     def get_queryset(self):
         category = self.kwargs.get('category')
