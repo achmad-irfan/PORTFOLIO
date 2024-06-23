@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
-  gap: 2vw;
+  gap: 0.5vw;
 }
 
 .nav-item {
@@ -40,9 +40,9 @@ a {
   flex-wrap: wrap;
   align-items: center;
 }
-.contain-isi {
+/* .contain-isi {
   height: 700%;
-}
+} */
 .projects-thumbnail img {
   border: 2px solid rgb(1, 1, 1);
   width: 300px;
@@ -56,7 +56,7 @@ a {
   margin-left: 20px;
 }
 .slide-project {
-  border: 10px blue solid;
+  border: 10px rgb(255, 255, 255) solid;
 }
 
 .detail-project {
