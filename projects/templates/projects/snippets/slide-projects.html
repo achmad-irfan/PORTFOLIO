@@ -7,10 +7,15 @@
   </div>
   <div class="contain-project">
     <div class="slide-project">
-      <img src="{{object.gambar.url}}" alt="" />
-      <img src="{{object.gambar2.url}}" alt="" />
-      <img src="{{object.gambar3.url}}" alt="" />
-      <img src="{{object.gambar4.url}}" alt="" />
+      {% if object.gambar %}
+      <img src="{{ object.gambar.url }}" alt="Gambar 1" />
+      {% endif %} {% if object.gambar2 %}
+      <img src="{{ object.gambar2.url }}" alt="Gambar 2" />
+      {% endif %} {% if object.gambar3 %}
+      <img src="{{ object.gambar3.url }}" alt="Gambar 3" />
+      {% endif %} {% if object.gambar4 %}
+      <img src="{{ object.gambar4.url }}" alt="Gambar 4" />
+      {% endif %}
     </div>
 
     <div class="detail-project">{% include 'projects/snippets/contain-projects.html' %}</div>
