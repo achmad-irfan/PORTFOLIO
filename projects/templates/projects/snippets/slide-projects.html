@@ -1,3 +1,4 @@
+{% load static %}
 <div class="contain-isi-projects">
   <div class="text-start app-title">{{title}}</div>
   <hr />
@@ -5,7 +6,13 @@
     <a href="{% url 'app_projects:projects' %}"><i class="bx bx-home-circle"></i></a>
   </div>
   <div class="contain-project">
-    <div class="slide-project"></div>
+    <div class="slide-project">
+      <img src="{{object.gambar.url}}" alt="" />
+      <img src="{{object.gambar2.url}}" alt="" />
+      <img src="{{object.gambar3.url}}" alt="" />
+      <img src="{{object.gambar4.url}}" alt="" />
+    </div>
+
     <div class="detail-project">{% include 'projects/snippets/contain-projects.html' %}</div>
   </div>
 </div>
