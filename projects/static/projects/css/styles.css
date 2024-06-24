@@ -213,4 +213,10 @@ a {
   .nav-item {
     width: 20%;
   }
+
+  .projects-thumbnail {
+    display: flex;
+    align-items: stretch;
+    border: 5px solid rgb(38, 2, 2);
+  }
 }
