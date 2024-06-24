@@ -194,6 +194,10 @@ a {
 }
 
 @media screen and (max-width: 575px) {
+  .contain-isi {
+    height: 200%;
+  }
+
   .isi {
     width: 90vw;
     margin: 10px;
