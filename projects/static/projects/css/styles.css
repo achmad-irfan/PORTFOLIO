@@ -198,6 +198,9 @@ a {
     width: 85vw;
   }
 
+  .projects-menu {
+    border: 5px solid red;
+  }
   a {
     font-size: 0.5em;
   }
