@@ -191,3 +191,9 @@ a {
   border: 5px solid white;
   margin: 10px;
 }
+
+@media screen and (max-width: 575px) {
+  .isi {
+    width: 90vw;
+  }
+}
