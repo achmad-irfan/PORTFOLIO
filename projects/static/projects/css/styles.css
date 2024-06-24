@@ -197,6 +197,9 @@ a {
   .isi {
     width: 90vw;
     margin: 10px;
+    display: flex;
+    align-items: stretch;
+    border: 10px solid red;
   }
 
   .projects-menu {
