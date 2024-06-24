@@ -245,4 +245,10 @@ a {
   .project-information p {
     font-size: 1.2em;
   }
+
+  .leftPaginator,
+  .Page,
+  .RightPaginator {
+    font-size: 2em;
+  }
 }
