@@ -223,4 +223,21 @@ a {
     align-items: stretch;
     border: 5px solid white;
   }
+
+  .slide-project,
+  .project-information {
+    border: 5px rgb(255, 255, 255) solid;
+  }
+
+  .contain-project {
+    display: grid;
+    grid-template-rows: 3fr auto;
+    margin-left: 20px;
+  }
+
+  .backButton .bx {
+    font-size: 2em;
+    color: white;
+    margin: 10px;
+  }
 }
