@@ -196,10 +196,11 @@ a {
 
   .isi {
     width: 90vw;
-    margin: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    gap: 20px;
   }
 
   .projects-menu {
@@ -207,7 +208,7 @@ a {
   }
 
   a {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 
   .nav-item {
@@ -232,7 +233,7 @@ a {
   }
 
   .slide-project img {
-    width: 80%;
+    width: 100%;
   }
 
   .backButton .bx {
@@ -246,6 +247,6 @@ a {
   }
 
   .project-information p {
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }
