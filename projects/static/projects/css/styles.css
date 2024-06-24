@@ -219,16 +219,20 @@ a {
     border: 5px solid white;
   }
 
-  .slide-project {
-    border: 5px rgb(255, 255, 255) solid;
-  }
-
   .contain-project {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     margin-left: 0;
-    border: 5px solid red;
+  }
+
+  .slide-project {
+    border: 5px rgb(255, 255, 255) solid;
+    grid-row: 2;
+  }
+
+  .slide-project img {
+    width: 80%;
   }
 
   .backButton .bx {
@@ -238,10 +242,10 @@ a {
   }
 
   .project-information h4 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
-  .project-information h4 {
+  .project-information p {
     font-size: 1em;
   }
 }
