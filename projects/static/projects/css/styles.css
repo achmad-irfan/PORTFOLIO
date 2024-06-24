@@ -196,10 +196,11 @@ a {
 @media screen and (max-width: 575px) {
   .isi {
     width: 90vw;
+    margin: 10px;
   }
 
   .projects-menu {
-    border: 5px solid red;
+    border: 5px solid rgb(53, 40, 150);
   }
   a {
     font-size: 0.5em;
