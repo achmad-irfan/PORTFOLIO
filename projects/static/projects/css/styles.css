@@ -195,5 +195,6 @@ a {
 @media screen and (max-width: 575px) {
   .isi {
     width: 90vw;
+    border: 2px solid red;
   }
 }
