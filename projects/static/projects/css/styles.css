@@ -6,6 +6,7 @@
 .nav-underline {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: wrap;
   list-style-type: none;
   gap: 0.5vw;
 }
@@ -194,7 +195,10 @@ a {
 
 @media screen and (max-width: 575px) {
   .isi {
-    width: 90vw;
-    border: 2px solid red;
+    width: 85vw;
+  }
+
+  a {
+    font-size: 1.5em;
   }
 }
