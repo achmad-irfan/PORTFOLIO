@@ -3,6 +3,7 @@
   border-radius: 20px;
   padding: 10px;
 }
+
 .nav-underline {
   display: flex;
   justify-content: space-evenly;
@@ -20,9 +21,9 @@
   padding: 8px;
   width: 120px;
   display: flex;
-  justify-content: center; /* Menengahkan secara horizontal */
-  align-items: center; /* Menengahkan secara vertikal */
-  text-align: center; /* Menengahkan secara horizontal jika perlu */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 /* .nav-link.active {
   background-color: rgb(35, 32, 32);
@@ -193,15 +194,20 @@ a {
 
   .isi {
     width: 90vw;
-    margin: 20px;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
   }
 
+  .projects-menu {
+    margin: 0;
+    padding: 10px;
+  }
+
   a {
-    font-size: 0.8em;
+    font-size: 0.5em;
   }
 
   .nav-item {
