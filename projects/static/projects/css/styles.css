@@ -198,6 +198,7 @@ a {
     width: 90vw;
     margin: 10px;
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     border: 10px solid red;
   }
