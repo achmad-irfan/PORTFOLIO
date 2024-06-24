@@ -217,6 +217,6 @@ a {
   .projects-thumbnail {
     display: flex;
     align-items: stretch;
-    border: 5px solid rgb(38, 2, 2);
+    border: 10px solid red;
   }
 }
