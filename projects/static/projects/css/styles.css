@@ -62,6 +62,7 @@ a {
 
 .detail-project {
   border: 5px solid white;
+  padding: 15px;
 }
 
 /* .contain-project .carousel-item {
