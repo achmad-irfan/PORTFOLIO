@@ -41,6 +41,7 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   align-items: stretch;
+  margin-bottom: 10px;
 }
 
 .projects-thumbnail img {
