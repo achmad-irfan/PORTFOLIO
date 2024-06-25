@@ -42,6 +42,7 @@ a {
   flex-wrap: wrap;
   align-items: stretch;
   margin-bottom: 10px;
+  gap: 10px;
 }
 
 .projects-thumbnail img {
