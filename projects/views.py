@@ -17,7 +17,7 @@ class detailProjectView(DetailView):
 
 class indexView(ListView):
     model = Proyek
-    ordering = ['-tanggal']
+    ordering = ['tanggal']
     paginate_by = 5
     extra_context = {
 
