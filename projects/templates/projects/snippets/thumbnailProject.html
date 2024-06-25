@@ -3,9 +3,12 @@
   <!--- Load images-->
   {% for items in object_list %}
   <!--- Load images-->
-  <a href="{% url 'app_projects:detail_ProjectView' items.slug %}">
-    <img src="{{ items.gambar.url }}" />
-  </a>
+  <div class="image-projects">
+    <a href="{% url 'app_projects:detail_ProjectView' items.slug %}">
+      <img src="{{ items.gambar.url }}" />
+      <h3>{{items.nama}}</h3>
+    </a>
+  </div>
   {% endfor %}
 </div>
 <div class="paginator">

@@ -78,6 +78,15 @@ a {
   margin-top: 30px;
 }
 
+.image-projects {
+  border: 5px rgb(197, 188, 214) solid;
+}
+
+.image-projects h3 {
+  background-color: rgb(52, 52, 133);
+  text-align: center;
+}
+
 .paginator {
   display: flex;
   justify-content: center;
