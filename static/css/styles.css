@@ -53,6 +53,7 @@ span.image img {
   flex-direction: row;
   justify-content: space-evenly;
   border-top: white 10px inset;
+  gap: 5px;
 }
 
 .icon-social i {

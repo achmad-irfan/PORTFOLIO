@@ -15,25 +15,25 @@ class detailProjectView(DetailView):
         return super().get_context_data(**kwargs)
 
 
-class indexView(ListView):
-    model = Proyek
-    ordering = ['tanggal']
-    paginate_by = 5
-    extra_context = {
+# class indexView(ListView):
+#     model = Proyek
+#     ordering = ['tanggal']
+#     paginate_by = 5
+#     extra_context = {
 
-        'title': 'Projects',
-        'item': ['SQL', 'Power BI', 'Tableau', 'Dash', 'Django']}
+#         'title': 'Projects',
+#         'item': ['SQL', 'Power BI', 'Tableau', 'Dash', 'Django']}
 
-    def get_queryset(self):
-        category = self.kwargs.get('category')
-        if category and category != "ALL":
-            return Proyek.objects.filter(category=category)
-        return Proyek.objects.all()
+#     def get_queryset(self):
+#         category = self.kwargs.get('category')
+#         if category and category != "ALL":
+#             return Proyek.objects.filter(category=category)
+#         return Proyek.objects.all()
 
-    def get_context_data(self, *args, **kwargs):
-        self.kwargs.update(self.extra_context)
-        kwargs = self.kwargs
-        return super().get_context_data(*args, **kwargs)
+#     def get_context_data(self, *args, **kwargs):
+#         self.kwargs.update(self.extra_context)
+#         kwargs = self.kwargs
+#         return super().get_context_data(*args, **kwargs)
 
 
 # def index(request):
@@ -56,6 +56,27 @@ class indexView(ListView):
 
 #     return render(request, 'projects/detailProjects.html', context)
 
+class indexView(ListView):
+    model = Proyek
+    ordering = ['-tanggal']
+    paginate_by = 5
+
+    # Menambahkan extra_context langsung di dalam get_context_data
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Projects'
+        context['item'] = ['SQL', 'Power BI', 'Tableau',
+                           'Dash', 'Django', 'Data Science', 'Classification']
+        return context
+
+    def get_queryset(self):
+        queryset = super().get_queryset()  # Mendapatkan queryset dasar dari ListView
+        category = self.kwargs.get('category')
+
+        if category and category != "ALL":
+            queryset = queryset.filter(category=category)
+
+        return queryset
 
 def report_project(request, proyek_slug):
     proyek = get_object_or_404(Proyek, slug=proyek_slug)
