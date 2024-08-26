@@ -3,13 +3,12 @@
   border-radius: 20px;
   padding: 10px;
 }
-
 .nav-underline {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   list-style-type: none;
-  gap: 0.5vw;
+  gap: 1.5vw;
 }
 
 .nav-item {
@@ -21,9 +20,9 @@
   padding: 8px;
   width: 120px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: center; /* Menengahkan secara horizontal */
+  align-items: center; /* Menengahkan secara vertikal */
+  text-align: center; /* Menengahkan secara horizontal jika perlu */
 }
 /* .nav-link.active {
   background-color: rgb(35, 32, 32);
@@ -40,11 +39,12 @@ a {
   margin-top: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: stretch;
-  margin-bottom: 10px;
+  align-items: center;
   gap: 10px;
 }
-
+/* .contain-isi {
+  height: 700%;
+} */
 .projects-thumbnail img {
   border: 2px solid rgb(1, 1, 1);
   width: 300px;
@@ -56,12 +56,23 @@ a {
   display: grid;
   grid-template-columns: 3fr 2fr;
   margin-left: 20px;
-  gap: 10px;
+}
+.slide-project {
+  border: 10px rgb(255, 255, 255) solid;
 }
 
 .detail-project {
-  border: 5px solid white;
-  padding: 15px;
+  margin-left: 20px;
+  border: 2px solid black;
+}
+
+.image-projects {
+  border: 5px rgb(197, 188, 214) solid;
+}
+
+.image-projects h3 {
+  background-color: rgb(52, 52, 133);
+  text-align: center;
 }
 
 /* .contain-project .carousel-item {
@@ -78,15 +89,6 @@ a {
 
 .button {
   margin-top: 30px;
-}
-
-.image-projects {
-  border: 5px rgb(197, 188, 214) solid;
-}
-
-.image-projects h3 {
-  background-color: rgb(52, 52, 133);
-  text-align: center;
 }
 
 .paginator {
@@ -176,6 +178,11 @@ a {
   font-size: 1.2vw;
 }
 
+.project-information {
+  border: 10px solid white;
+  padding: 1.5vw;
+}
+
 .project-information h4 {
   font-size: 2.5vw;
 }
@@ -188,80 +195,10 @@ a {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  border: 5px rgb(255, 255, 255) solid;
 }
-
 .slide-project img {
-  width: 100%;
+  width: 40vw;
   height: 300px;
   border: 5px solid white;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 575px) {
-  .contain-isi {
-    height: 185%;
-  }
-
-  .isi {
-    width: 90vw;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .projects-menu {
-    margin: 0;
-    padding: 10px;
-  }
-
-  a {
-    font-size: 0.5em;
-  }
-
-  .nav-item {
-    width: 20%;
-  }
-
-  .projects-thumbnail {
-    display: flex;
-    border: 5px solid white;
-  }
-
-  .contain-project {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .slide-project {
-    border: 5px rgb(255, 255, 255) solid;
-    grid-row: 2;
-  }
-
-  .slide-project img {
-    width: 100%;
-  }
-
-  .backButton .bx {
-    font-size: 3em;
-    color: white;
-    margin: 10px;
-  }
-
-  .project-information h4 {
-    font-size: 1.8em;
-  }
-
-  .project-information p {
-    font-size: 1.2em;
-  }
-
-  .leftPaginator,
-  .Page,
-  .RightPaginator {
-    font-size: 2em;
-  }
+  margin: 10px;
 }

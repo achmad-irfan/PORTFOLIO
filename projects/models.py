@@ -101,3 +101,5 @@ class dataPrep(models.Model):
 
     def __str__(self):
         return f"dataprep-{', '.join([str(proyek) for proyek in self.namaProject.all()])}"
+
+
