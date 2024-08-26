@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
 
-# Create your models here.
+# create your models here.
 
 
 class Proyek(models.Model):
@@ -12,9 +12,11 @@ class Proyek(models.Model):
         ('Tableau', 'Tableau'),
         ('Python Dash', 'Python Dash'),
         ('Python Django', 'Python Django'),
+        ('Data Science', 'Data Sciance')
     ]
-    nama = models.CharField(max_length=50)
-    category = models.CharField(choices=ITEM_CHOICES, max_length=50)
+    id = models.AutoField(primary_key=True)
+    nama = models.CharField(max_length=250)
+    category = models.CharField(choices=ITEM_CHOICES, max_length=250)
     gambar = models.ImageField(upload_to='media', blank=True)
     gambar2 = models.ImageField(upload_to='media', blank=True)
     gambar3 = models.ImageField(upload_to='media', blank=True)
@@ -24,6 +26,9 @@ class Proyek(models.Model):
     output = models.URLField(default='a')
     detail = models.URLField(default='a')
     slug = models.SlugField(blank=True, editable=False)
+    summary = models.TextField(max_length=25000)
+    tools = models.CharField(max_length=40)
+    method = models.CharField(max_length=40)
 
     def save(self):
         self.slug = slugify(self.nama)
@@ -31,6 +36,41 @@ class Proyek(models.Model):
 
     def __str__(self):
         return "{} - {}".format(self.nama, self.category)
+
+
+class purpose(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='purpose')
+    heading = models.TextField(blank=True)
+    isi1 = models.CharField(max_length=250, blank=True)
+    Contentisi1 = models.CharField(max_length=250, blank=True)
+
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.CharField(max_length=250, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"purpose-{self.namaProject}"
+
+
+class datasets(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='datasets')
+    heading = models.TextField(max_length=2500, blank=True)
+    isi1 = models.CharField(max_length=250, blank=True)
+    Contentisi1 = models.CharField(max_length=250, blank=True)
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.CharField(max_length=250, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+    isi4 = models.CharField(max_length=250, blank=True)
+    Contentisi4 = models.CharField(max_length=250, blank=True)
+    isi5 = models.CharField(max_length=250, blank=True)
+    Contentisi5 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"dataset-{self.namaProject}"
 
 
 class heading(models.Model):
@@ -48,25 +88,6 @@ class background(heading):
     background = models.TextField()
 
 
-class dataset(models.Model):
-    namaProject = models.ManyToManyField(Proyek, related_name='dataset', )
-    heading = models.TextField(blank=True)
-    link = models.CharField(max_length=200, blank=True)
-    contentLink = models.CharField(max_length=200, blank=True)
-
-    def __str__(self):
-        return f"dataset-{', '.join([str(proyek) for proyek in self.namaProject.all()])}"
-
-
-class purpose(models.Model):
-    namaProject = models.ManyToManyField(Proyek, related_name='purpose')
-    isi = models.TextField(blank=True)
-    heading = models.TextField(blank=True)
-
-    def __str__(self):
-        return f"purpose-{', '.join([str(proyek) for proyek in self.namaProject.all()])}"
-
-
 class result(models.Model):
     namaProject = models.ManyToManyField(Proyek, related_name='results', )
     isi = models.TextField()
@@ -74,7 +95,7 @@ class result(models.Model):
     code = models.TextField(blank=True)
 
     def __str__(self):
-        return f"result-{', '.join([str(proyek) for proyek in self.namaProject.all()])}"
+        return "{}".format(self.namaProject)
 
 
 class insight(models.Model):
@@ -103,3 +124,141 @@ class dataPrep(models.Model):
         return f"dataprep-{', '.join([str(proyek) for proyek in self.namaProject.all()])}"
 
 
+class conclution(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='conclution')
+    heading = models.TextField(max_length=2500)
+    isi1 = models.CharField(max_length=250, blank=True)
+    Contentisi1 = models.CharField(max_length=250, blank=True)
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.CharField(max_length=250, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+    isi4 = models.CharField(max_length=250, blank=True)
+    Contentisi4 = models.CharField(max_length=250, blank=True)
+    isi5 = models.CharField(max_length=250, blank=True)
+    Contentisi5 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"conclution-{self.namaProject}"
+
+
+class improvment(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='improvment')
+    heading = models.TextField(max_length=2500)
+    isi1 = models.CharField(max_length=250, blank=True)
+    Contentisi1 = models.CharField(max_length=250, blank=True)
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.CharField(max_length=250, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+    isi4 = models.CharField(max_length=250, blank=True)
+    Contentisi4 = models.CharField(max_length=250, blank=True)
+    isi5 = models.CharField(max_length=250, blank=True)
+    Contentisi5 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"improvment-{self.namaProject}"
+
+
+class evaluation(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='evaluation')
+    heading = models.TextField(max_length=2500)
+    isi1 = models.CharField(max_length=250, blank=True)
+    Contentisi1 = models.CharField(max_length=250, blank=True)
+    Codeisi1 = models.TextField(max_length=250, blank=True)
+    Imageisi1 = models.ImageField(upload_to='projects/', null=True, blank=True)
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.CharField(max_length=250, blank=True)
+    Codeisi2 = models.TextField(max_length=250, blank=True)
+    Imageisi2 = models.ImageField(upload_to='projects/', null=True, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+    Codeisi3 = models.TextField(max_length=250, blank=True)
+    Imageisi3 = models.ImageField(upload_to='projects/', null=True, blank=True)
+    isi4 = models.CharField(max_length=250, blank=True)
+    Contentisi4 = models.CharField(max_length=250, blank=True)
+    Codeisi4 = models.TextField(max_length=250, blank=True)
+    Imageisi4 = models.ImageField(upload_to='projects/', null=True, blank=True)
+    isi5 = models.CharField(max_length=250, blank=True)
+    Contentisi5 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"evaluation-{self.namaProject}"
+
+
+class training(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='training')
+    heading = models.TextField(max_length=2500)
+    isi1 = models.CharField(max_length=250, blank=True)
+    Contentisi1 = models.TextField(max_length=250, blank=True)
+    Codeisi1 = models.TextField(max_length=250, blank=True)
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.CharField(max_length=250, blank=True)
+    codeisi2 = models.ImageField(upload_to='projects/', null=True, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+    isi4 = models.CharField(max_length=250, blank=True)
+    Contentisi4 = models.CharField(max_length=250, blank=True)
+    isi5 = models.CharField(max_length=250, blank=True)
+    Contentisi5 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"training-{self.namaProject}"
+
+
+class arsitektur(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='arsitektur')
+    heading = models.TextField(max_length=2500)
+    isi1 = models.CharField(max_length=250, blank=True)
+    Contentisi1 = models.CharField(max_length=250, blank=True)
+    Codeisi1 = models.TextField(max_length=2000, blank=True)
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.CharField(max_length=1250, blank=True)
+    Codeisi2 = models.TextField(max_length=2000, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+    codeisi3 = models.ImageField(upload_to='projects/', null=True, blank=True)
+    isi4 = models.CharField(max_length=250, blank=True)
+    Contentisi4 = models.TextField(max_length=2500, blank=True)
+    Codeisi4 = models.TextField(max_length=2000, blank=True)
+    isi5 = models.CharField(max_length=250, blank=True)
+    Contentisi5 = models.CharField(max_length=250, blank=True)
+    Codeisi5 = models.TextField(max_length=2000, blank=True)
+    isi6 = models.CharField(max_length=250, blank=True)
+    Contentisi6 = models.CharField(max_length=250, blank=True)
+    isi7 = models.CharField(max_length=250, blank=True)
+    Contentisi7 = models.CharField(max_length=250, blank=True)
+    isi8 = models.CharField(max_length=250, blank=True)
+    Contentisi8 = models.CharField(max_length=250, blank=True)
+    isi9 = models.CharField(max_length=250, blank=True)
+    Contentisi9 = models.CharField(max_length=250, blank=True)
+    isi10 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"arsitektur-{self.namaProject}"
+
+
+class praprocess(models.Model):
+    namaProject = models.ForeignKey(
+        Proyek, on_delete=models.CASCADE, related_name='praprocess')
+    heading = models.TextField(max_length=2500, blank=True)
+    isi1 = models.TextField(max_length=250, blank=True)
+    Contentisi1 = models.TextField(max_length=250, blank=True)
+    Codeisi1 = models.TextField(max_length=2000, blank=True)
+    isi2 = models.CharField(max_length=250, blank=True)
+    Contentisi2 = models.TextField(max_length=250, blank=True)
+    Codeisi2 = models.TextField(max_length=2000, blank=True)
+    isi3 = models.CharField(max_length=250, blank=True)
+    Contentisi3 = models.CharField(max_length=250, blank=True)
+    isi4 = models.CharField(max_length=250, blank=True)
+    Contentisi4 = models.CharField(max_length=250, blank=True)
+    isi5 = models.CharField(max_length=250, blank=True)
+    Contentisi5 = models.CharField(max_length=250, blank=True)
+
+    def __str__(self):
+        return f"praprocess-{self.namaProject}"
