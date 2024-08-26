@@ -1,7 +1,5 @@
+from .models import Proyek, background,  datasets, result, insight, purpose, praprocess, recommendation, dataPrep, conclution, improvment, evaluation, training, arsitektur
 from django.contrib import admin
-
-# Register your models here.
-from .models import Proyek, background, purpose, dataset, result, insight, recommendation, dataPrep
 
 
 class ProyekAdmin(admin.ModelAdmin):
@@ -9,10 +7,15 @@ class ProyekAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Proyek, ProyekAdmin)
-admin.site.register(background)
-admin.site.register(purpose)
-admin.site.register(dataset)
 admin.site.register(result)
 admin.site.register(insight)
 admin.site.register(recommendation)
 admin.site.register(dataPrep)
+admin.site.register(datasets)
+admin.site.register(purpose)
+admin.site.register(conclution)
+admin.site.register(improvment)
+admin.site.register(evaluation)
+admin.site.register(training)
+admin.site.register(arsitektur)
+admin.site.register(praprocess)
