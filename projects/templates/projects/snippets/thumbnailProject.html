@@ -1,7 +1,7 @@
 {% load static %}
 <div class="projects-thumbnail">
   <!--- Load images-->
-  {% for items in item %}
+  {% for items in object_list %}
   <!--- Load images-->
   <div class="image-projects">
     <a href="{% url 'app_projects:detail_ProjectView' items.slug %}">

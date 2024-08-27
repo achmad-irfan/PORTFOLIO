@@ -27,8 +27,8 @@ class Proyek(models.Model):
     detail = models.URLField(default='a')
     slug = models.SlugField(blank=True, editable=False)
     summary = models.TextField(max_length=25000)
-    tools = models.CharField(max_length=40,blank=True)
-    method = models.CharField(max_length=40,blank=True)
+    tools = models.CharField(max_length=40, blank=True)
+    method = models.CharField(max_length=40, blank=True)
 
     def save(self):
         self.slug = slugify(self.nama)
