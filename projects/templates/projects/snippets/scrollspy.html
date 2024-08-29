@@ -1,0 +1,36 @@
+<div class="scrollspy-example">
+  <nav id="navbar-example" class="navbar bg-body-tertiary px-3 mb-3">
+    <a class="navbar-brand" href="#"> Navbar </a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#summary"> Summary </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#purpose">Purpose</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#specification">Spesification</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#dataset">Dataset</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#praprocess">Exploration</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Bab Lain</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#arsitektur">Arsitektur Model</a></li>
+          <li><a class="dropdown-item" href="#training">Training</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#evaluation">Evaluation</a></li>
+          <li><a class="dropdown-item" href="#improvment">Improvment</a></li>
+          <li><a class="dropdown-item" href="#conclution">Conclution</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+    {% include 'projects/snippets/report-projects.html' %}
+  </div>
+</div>

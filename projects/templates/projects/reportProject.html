@@ -1,0 +1,82 @@
+{% extends 'base.html' %} {% load static %} {% block css_app %}
+<!-- CSS Main-->
+{% include 'snippets/main_css.html' %}
+<!-- CSS App General-->
+{% include 'about/snippets/main_app_css.html' %}
+<!-- CSS App Projects-->
+<link rel="stylesheet" type="text/css" href="{% static "projects\css\styles.css" %}" />
+<!-- Akhir Blok -->
+{% endblock %}
+
+<!--Isi Content -->
+{% block contain_isi %}
+<div class="text-start app-title">{{ proyek.nama }}</div>
+<hr />
+<div class="report">
+  <div id="icon-report">
+    <a href="{% url 'app_projects:detail_ProjectView' proyek.slug %}"><i class="bx bx-home-circle text-end"></i></a>
+  </div>
+  <ol>
+    {% for item in orderhead %}
+    <li>{{ item|title }}</li>
+    <!--Background -->
+    {% if item == 'background' %}
+    <p>{{ proyek.background.background }}</p>
+
+    <!--Purpose -->
+    {% elif item == 'purpose' %} {% for heading_item in proyek.purpose.all %}
+    <p>{{heading_item.heading}}</p>
+    {% endfor %} {% for isi_item in proyek.purpose.all %} {% if isi_item.isi %}
+    <ul id="purpose">
+      <li>{{isi_item.isi}}</li>
+    </ul>
+    {% endif %} {% endfor %}
+
+    <!--Dataset -->
+    {% elif item == 'dataset' %} {% for dataset_heading in proyek.dataset.all %}
+    <p>{{dataset_heading.heading}}</p>
+    {% endfor %} {% for dataset_heading in proyek.dataset.all %} {% endfor %}
+    <ul id="linkProject">
+      {% for link in proyek.dataset.all %} {% if link.contentLink %}
+      <li><a href="{{ link.link }}">{{ link.contentLink }}</a></li>
+      {% endif %} {% endfor %}
+    </ul>
+
+    <!--Data Preparation  -->
+    {% elif item == 'data preparation' %} {% if proyek.dataprep.all %}
+    <ul class="code">
+      {% for head_item in proyek.dataprep.all %}
+      <li>{{head_item.heading}}</li>
+      <p>{{head_item.code}}</p>
+      {% if head_item.image %}
+      <h6>Output:</h6>
+      <img src="{{head_item.image.url}}" alt="Gambar" />
+      {% endif %} {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!--Result -->
+    {% elif item == 'result' %}
+    <ul id="result">
+      {% for result_item in proyek.results.all %}
+      <li>{{ result_item.isi }}</li>
+      {% if result_item.code %}
+      <p>Code:</p>
+      <p id="codeResult">{{result_item.code}}</p>
+      {% endif %}
+      <p>Output:</p>
+      <img src="{{ result_item.gambar.url }}" alt="Gambar" />
+      {% endfor %}
+    </ul>
+
+    <!--Recomendation -->
+    {% elif item == 'insight and recomendation' %}
+    <ul id="insight_items">
+      {% for insight_item in proyek.insight.all %}
+      <li>{{insight_item.isi}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endfor %}
+  </ol>
+</div>
+{% endblock %}

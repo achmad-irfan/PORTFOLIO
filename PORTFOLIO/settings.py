@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "about",
     "education",
     "skill",
-    # "projects",
+    "projects",
     "services",
     "contact",
 ]

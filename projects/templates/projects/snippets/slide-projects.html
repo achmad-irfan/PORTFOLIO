@@ -1,0 +1,23 @@
+{% load static %}
+<div class="contain-isi-projects">
+  <div class="text-start app-title">{{title}}</div>
+  <hr />
+  <div class="backButton">
+    <a href="{% url 'app_projects:projects' %}"><i class="bx bx-home-circle"></i></a>
+  </div>
+  <div class="contain-project">
+    <div class="slide-project">
+      {% if object.gambar %}
+      <img src="{{ object.gambar.url }}" alt="Gambar 1" />
+      {% endif %} {% if object.gambar2 %}
+      <img src="{{ object.gambar2.url }}" alt="Gambar 2" />
+      {% endif %} {% if object.gambar3 %}
+      <img src="{{ object.gambar3.url }}" alt="Gambar 3" />
+      {% endif %} {% if object.gambar4 %}
+      <img src="{{ object.gambar4.url }}" alt="Gambar 4" />
+      {% endif %}
+    </div>
+
+    <div class="detail-project">{% include 'projects/snippets/contain-projects.html' %}</div>
+  </div>
+</div>

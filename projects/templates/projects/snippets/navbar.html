@@ -1,0 +1,31 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg container-fluid border-bottom">
+  <div class="container-fluid">
+    <span class="image"> <img src="{% static 'img/logo.png' %}" alt="logoxx" /> </span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100 d-flex start">
+        <li class="nav-item mx-4">
+          <a class="nav-link active fs-5" aria-current="page" href="{% url 'app_projects:projects' %}">Home</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link active fs-5" aria-current="page" href="{% url 'app_about:about' %}">About</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link active fs-5" aria-current="page" href="{% url 'app_education:education' %}">Education</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link active fs-5" aria-current="page" href="{% url 'app_skill:skill' %}">Skill</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link active fs-5" aria-current="page" href="{% url 'app_services:services' %}">Services</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link active fs-5" aria-current="page" href="{% url 'app_contact:contact' %}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
