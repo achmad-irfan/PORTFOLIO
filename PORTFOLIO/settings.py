@@ -29,8 +29,8 @@ SECRET_KEY = "django-insecure-wy=1=*hfu$&hfib6zx8i*#yu7i01yj5%jybtj*_2h#z*xx750c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.achmad-irfan.cloud',
-                 'achmad-irfan.cloud', 'jagoanhosting.my.id', '127.0.0.1']
+ALLOWED_HOSTS = ['www.achmad-irfan.my.id',
+                 'achmad-irfan.my.id', 'jagoanhosting.my.id', '127.0.0.1']
 
 
 # Application definition
